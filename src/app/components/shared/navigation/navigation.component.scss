@@ -1,0 +1,10 @@
+:host {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        &-menu {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}

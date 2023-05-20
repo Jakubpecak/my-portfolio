@@ -1,0 +1,14 @@
+:host {
+    .footer {
+        display: flex;
+        gap: 20px;
+
+        &-item {
+        }
+    }
+
+    .copy-rights {
+        display: flex;
+        justify-content: center;
+    }
+}
