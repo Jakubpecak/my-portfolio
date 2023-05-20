@@ -8,6 +8,8 @@ import { NavigationComponent } from './components/shared/navigation/navigation.c
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { MyProfileComponent } from './components/main/my-profile/my-profile.component';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { PageNotFoundComponent } from './components/shared/page-not-found/page-n
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
