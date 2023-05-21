@@ -14,6 +14,11 @@ import { AboutMeComponent } from './components/main/my-profile/about-me/about-me
 import { SkillsComponent } from './components/main/my-profile/skills/skills.component';
 import { ContactComponent } from './components/main/my-profile/contact/contact.component';
 import { HomeComponent } from './components/main/my-profile/home/home.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { SkillsAccordionComponent } from './components/main/my-profile/skills/skills-accordion/skills-accordion.component';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +30,8 @@ import { HomeComponent } from './components/main/my-profile/home/home.component'
     AboutMeComponent,
     SkillsComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    SkillsAccordionComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,10 @@ import { HomeComponent } from './components/main/my-profile/home/home.component'
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    CdkAccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,12 @@
-<p>skills works!</p>
+<div class="container col">
+    <h2 class="center-txt">Skills</h2>
+    <h3 class="center-txt pb">My technical level</h3>
+    <div class="skills" [ngStyle]="{'display': 'flex', 'justify-content': 'center', 'gap': '200px'}">
+        <div class="skills-left-wrapper">
+            <app-skills-accordion [title]="leftWrapTitle" [text]="leftWrapText"></app-skills-accordion>
+        </div>
+        <div class="skills-right-wrapper">
+            <app-skills-accordion [title]="rightWrapTitle" [text]="rightWrapText"></app-skills-accordion>
+        </div>
+    </div>
+</div>
