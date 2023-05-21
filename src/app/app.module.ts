@@ -10,6 +10,10 @@ import { MyProfileComponent } from './components/main/my-profile/my-profile.comp
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AboutMeComponent } from './components/main/my-profile/about-me/about-me.component';
+import { SkillsComponent } from './components/main/my-profile/skills/skills.component';
+import { ContactComponent } from './components/main/my-profile/contact/contact.component';
+import { HomeComponent } from './components/main/my-profile/home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavigationComponent,
     FooterComponent,
     MyProfileComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AboutMeComponent,
+    SkillsComponent,
+    ContactComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

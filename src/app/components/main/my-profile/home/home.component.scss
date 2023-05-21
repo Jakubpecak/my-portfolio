@@ -1,0 +1,25 @@
+:host {
+    .row {
+        justify-content: space-around;
+        gap: 50px;
+        
+        .social-sidebar {
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+    img {
+        border-radius: 50%;
+        width: 50%;
+    }
+    .description {
+        max-width: 500px;
+        justify-content: center;
+        gap: 20px;
+
+    }
+}
+
+.fa-hand-point-right {
+    margin-left: 5px;
+}
