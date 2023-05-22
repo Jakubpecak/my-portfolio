@@ -1,14 +1,31 @@
 :host {
+    .container {
+        padding-bottom: 10px!important;
+    }
     .footer {
         display: flex;
         gap: 20px;
 
-        &-item {
+        &-menu {
+            gap: 20px;
+            &-item {
+                font-size: 18px;
+            }
+        }
+
+        &-socials {
+            gap: 20px;
+            width: 240px;
+            &-item {
+                font-size: 18px;
+            }
         }
     }
 
     .copy-rights {
         display: flex;
         justify-content: center;
+        padding-top: 100px;
+        font-size: 1.2rem;
     }
 }

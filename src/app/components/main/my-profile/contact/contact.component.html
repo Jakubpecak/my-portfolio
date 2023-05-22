@@ -1,1 +1,33 @@
-<p>contact works!</p>
+<div class="container col">
+    <h2 class="center-txt">Contact me</h2>
+    <h3 class="center-txt pb">Get in touch</h3>
+    <div class="contact row center" [ngStyle]="{'gap': '50px'}">
+        <div class="contact-left col">
+            <div class="contact-left-phone row center-item" [ngStyle]="{'padding-bottom': '50px'}">
+                <i class="fas fa-phone icon"></i>
+                <div>
+                    <h3>Call me</h3>
+                    <a href="tel:517181523">517-181-523</a>
+                </div>
+            </div>
+            <div class="contact-left-email row center-item" [ngStyle]="{'padding-bottom': '50px'}">
+                <i class="fas fa-envelope icon"></i>
+                <div>
+                    <h3>Email</h3>
+                    <a href="mailto:jakub.pecak@o2.pl">jakub.pecak@o2.pl</a>
+                </div>
+            </div>
+            <div class="contact-left-location row center-item" [ngStyle]="{'padding-bottom': '50px'}">
+                <i class="fas fa-location-arrow icon"></i>
+                <div>
+                    <h3>Poland</h3>
+                    <a>Rzeszów</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-right col">
+            <app-contact-form></app-contact-form>
+        </div>
+    </div>
+
+</div>

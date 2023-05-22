@@ -18,6 +18,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SkillsAccordionComponent } from './components/main/my-profile/skills/skills-accordion/skills-accordion.component';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
+import { ContactFormComponent } from './components/main/my-profile/contact/contact-form/contact-form.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
     ContactComponent,
     HomeComponent,
     SkillsAccordionComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
