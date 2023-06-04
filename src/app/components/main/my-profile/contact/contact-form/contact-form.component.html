@@ -1,1 +1,48 @@
-<p>contact-form works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <app-error [control]="form.get('name')">
+        <app-input
+        id="name"
+        [type]="'text'"
+        [control]="form.get('name')"
+        [label]="'Name'"
+        ></app-input>
+    </app-error>
+
+    <app-error [control]="form.get('email')">
+        <app-input
+        id="email"
+        [type]="'text'"
+        [control]="form.get('email')"
+        [label]="'Email'"
+        ></app-input>
+    </app-error>
+
+    <app-error [control]="form.get('phone')">
+        <app-input
+        id="phone"
+        [type]="'text'"
+        [control]="form.get('phone')"
+        [label]="'Phone'"
+        ></app-input>
+    </app-error>
+
+    <app-error [control]="form.get('description')">
+        <app-input
+        id="description"
+        [type]="'text'"
+        [control]="form.get('description')"
+        [label]="'Description'"
+        ></app-input>
+    </app-error>
+
+    <app-error [control]="form.get('accept')">
+        <mat-checkbox formControlName="accept">Accept</mat-checkbox>
+    </app-error>
+
+
+    <button type="submit" [ngClass]="this.form.valid ? 'validBtn' : 'invalidBtn'">Send</button>
+
+
+</form>
+

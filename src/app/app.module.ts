@@ -19,6 +19,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { SkillsAccordionComponent } from './components/main/my-profile/skills/skills-accordion/skills-accordion.component';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { ContactFormComponent } from './components/main/my-profile/contact/contact-form/contact-form.component';
+import { InputComponent } from './components/shared/input/input.component';
+import { MatInputModule } from '@angular/material/input';
+import { ErrorComponent } from './components/shared/error/error.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 
 @NgModule({
@@ -34,6 +39,8 @@ import { ContactFormComponent } from './components/main/my-profile/contact/conta
     HomeComponent,
     SkillsAccordionComponent,
     ContactFormComponent,
+    InputComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +51,10 @@ import { ContactFormComponent } from './components/main/my-profile/contact/conta
     ReactiveFormsModule,
     MatExpansionModule,
     MatFormFieldModule,
-    CdkAccordionModule
+    CdkAccordionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

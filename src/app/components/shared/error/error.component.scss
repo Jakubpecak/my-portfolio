@@ -1,0 +1,44 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.content {
+    display: block;
+    width: 100%;
+    z-index: 0;
+}
+
+.error {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    background-color: red;
+    color: black;
+    font-size: 1rem;
+    border-radius: 0 0 4px 4px;
+    top: -20px;
+    z-index: 0;
+    animation: 0.3s ease-out showError forwards;
+}
+
+@keyframes showError {
+    0% {
+        display: none;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
