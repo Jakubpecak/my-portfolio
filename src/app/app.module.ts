@@ -23,6 +23,7 @@ import { InputComponent } from './components/shared/input/input.component';
 import { MatInputModule } from '@angular/material/input';
 import { ErrorComponent } from './components/shared/error/error.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { SpinnerComponent } from './components/shared/spinner/spinner.component';
 
 
 
@@ -41,6 +42,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     ContactFormComponent,
     InputComponent,
     ErrorComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
