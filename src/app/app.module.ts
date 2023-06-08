@@ -24,8 +24,9 @@ import { MatInputModule } from '@angular/material/input';
 import { ErrorComponent } from './components/shared/error/error.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SpinnerComponent } from './components/shared/spinner/spinner.component';
-
-
+import { QualificationComponent } from './components/main/qualification/qualification.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { SpinnerComponent } from './components/shared/spinner/spinner.component'
     InputComponent,
     ErrorComponent,
     SpinnerComponent,
+    QualificationComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,9 +58,12 @@ import { SpinnerComponent } from './components/shared/spinner/spinner.component'
     CdkAccordionModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatStepperModule,
+    MatIconModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
