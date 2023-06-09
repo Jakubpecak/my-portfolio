@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SkillsAccordionComponent implements OnInit {
   @Input() title: any;
-  @Input() text: any;
+  @Input() textList: string[] = [];
+  @Input() progressList: string[] = [];
   expandedIndex = 0;
 
   constructor() { }

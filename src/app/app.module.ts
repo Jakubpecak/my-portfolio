@@ -27,6 +27,7 @@ import { SpinnerComponent } from './components/shared/spinner/spinner.component'
 import { QualificationComponent } from './components/main/qualification/qualification.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     MatCheckboxModule,
     MatStepperModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule
   ],
   providers: [
   ],

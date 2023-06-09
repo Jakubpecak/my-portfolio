@@ -1,4 +1,4 @@
-<div class="container col">
+<div class="container col" [ngClass]="isWorkOpen ? 'large-height' : 'low-height'">
     <h2 class="center-txt">Qualification</h2>
     <h3 class="center-txt pb">My personal journey</h3>
     <div class="qualification col" [ngStyle]="{'align-items' : 'center'}">
@@ -16,7 +16,7 @@
           
             <div class="qualification-road-education" *ngIf="!isWorkOpen"> 
               <mat-vertical-stepper #stepper class="stepper" [disableRipple]="true">
-                <ng-template matStepperIcon="edit" [disableRipple]="true">
+                <ng-template matStepperIcon="edit">
                     <mat-icon>done</mat-icon>
                 </ng-template>
                 <ng-template matStepperIcon="number" let-index="index">

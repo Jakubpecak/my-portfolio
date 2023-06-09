@@ -10,7 +10,7 @@
     <div class="accordion-wrapper">
       <i class="fas fa-code" *ngIf="title === 'Frontend developer'"></i>
       <i class="fas fa-laptop-code" *ngIf="title !== 'Frontend developer'"></i>
-      <div class="accordion-item-header" (click)="accordionItem.toggle()">
+      <div class="accordion-item-header" (click)="accordionItem.toggle()" [ngStyle]="{'padding-bottom' : '0'}">
         <div>
           <h3>{{ title }}</h3>
           <h5>{{ title }}</h5>
@@ -22,12 +22,18 @@
       </div>
     </div>
     <div
+      [ngStyle]="{'padding-top' : '0'}"
       class="accordion-item-body"
       role="region"
       [style.display]="accordionItem.expanded ? '' : 'none'"
       [attr.id]="'accordion-body-' + 1"
       [attr.aria-labelledby]="'accordion-header-' + 1">
-      {{ text }}
+      <ul>
+        <ng-container *ngFor="let text of textList; let i = index">
+          <li [ngStyle]="{'padding' : '15px 0 5px 0'}">{{ text }}<span>{{ progressList[i] }}%</span></li>
+          <mat-progress-bar mode="determinate" value="{{ progressList[i] }}"></mat-progress-bar>
+        </ng-container>
+      </ul>
     </div>
   </cdk-accordion-item>
 </cdk-accordion>
