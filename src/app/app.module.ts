@@ -31,7 +31,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ServiceComponent } from './components/main/my-profile/service/service.component';
 import { PopupComponent } from './components/shared/popup/popup.component';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { PortfolioComponent } from './components/main/my-profile/portfolio/portfolio.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +51,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     QualificationComponent,
     ServiceComponent,
     PopupComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
