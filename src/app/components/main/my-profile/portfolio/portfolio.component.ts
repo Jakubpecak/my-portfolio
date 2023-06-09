@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { DragScrollComponent } from 'ngx-drag-scroll';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,29 +6,10 @@ import { DragScrollComponent } from 'ngx-drag-scroll';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
-  @ViewChild('nav', {read: DragScrollComponent}) ds!: DragScrollComponent;
-
-
   constructor() {}
 
   ngOnInit(): void {
   }
 
-  moveLeft() {
-    this.ds.moveLeft();
-  }
 
-  moveRight() {
-    this.ds.moveRight();
-  }
-
-  moveTo(index: number) {
-    this.ds.moveTo(index);
-  }
-
-  ngAfterViewInit() {
-    setTimeout(() => {
-      this.ds.moveTo(3);
-    }, 0);
-  }
 }

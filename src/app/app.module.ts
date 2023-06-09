@@ -33,6 +33,8 @@ import { PopupComponent } from './components/shared/popup/popup.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PortfolioComponent } from './components/main/my-profile/portfolio/portfolio.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CarouselHolderComponent } from './components/shared/carousel-holder/carousel-holder.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import { DragScrollModule } from 'ngx-drag-scroll';
     ServiceComponent,
     PopupComponent,
     PortfolioComponent,
+    CarouselHolderComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +75,8 @@ import { DragScrollModule } from 'ngx-drag-scroll';
     MatIconModule,
     MatProgressBarModule,
     MatDialogModule,
-    DragScrollModule
+    DragScrollModule,
+    CarouselModule
   ],
   providers: [
   ],

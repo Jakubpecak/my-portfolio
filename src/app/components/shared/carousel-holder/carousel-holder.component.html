@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div class="left">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let slide of apiData">
+                <ng-template class="slide" carouselSlide [id]="slide.id">
+                <img [src]="slide.url" [alt]="slide.id" [title]="slide.id">
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+    <div class="right">
+        <div class="portfolio-content-box col">
+            <h3>Modern Website</h3>
+            <p>Website adaptable to all devices with ui components and animated interactions.</p>
+            <button>Check</button>
+        </div>
+    </div>
+</div>

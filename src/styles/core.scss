@@ -1,3 +1,6 @@
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
 html, body {
     box-sizing: border-box;
     margin: 0;
@@ -68,4 +71,15 @@ button {
 
 .mat-mdc-dialog-surface {
     padding: 20px;
+}
+
+.owl-carousel {
+    position: static!important;
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 50%);
 }

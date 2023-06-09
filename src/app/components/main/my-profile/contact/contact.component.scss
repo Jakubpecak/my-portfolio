@@ -3,11 +3,20 @@
         margin-bottom: 5px!important;
     }
 
+    .contact-left {
+        align-items: center;
+    }
     .contact-left, .contact-right {
         width: 50%;
 
         .icon {
             padding-right: 2rem;
         }
+    }
+
+    .center-item {
+        width: 185px;
+        justify-content: start;
+        padding-bottom: 50px;
     }
 }
