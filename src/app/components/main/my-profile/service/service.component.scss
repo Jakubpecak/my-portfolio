@@ -1,0 +1,25 @@
+:host {
+    .service {
+        justify-content: center;
+        gap: 50px;
+
+        .service-box {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 30px;
+            height: 250px;
+            width: 250px;
+            justify-content: space-around;
+
+            .service-box-icon {
+                font-size: 25px;
+            } 
+            .service-box-view__more {
+                cursor: pointer;
+                i {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}

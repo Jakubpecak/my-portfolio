@@ -28,6 +28,9 @@ import { QualificationComponent } from './components/main/qualification/qualific
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ServiceComponent } from './components/main/my-profile/service/service.component';
+import { PopupComponent } from './components/shared/popup/popup.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     ErrorComponent,
     SpinnerComponent,
     QualificationComponent,
+    ServiceComponent,
+    PopupComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,7 +67,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatCheckboxModule,
     MatStepperModule,
     MatIconModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatDialogModule
   ],
   providers: [
   ],
