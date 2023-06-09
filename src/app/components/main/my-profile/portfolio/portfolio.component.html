@@ -3,5 +3,13 @@
     <h3 class="center-txt pb">Most recent work</h3>
     <div class="portfolio row center" [ngStyle]="{'gap': '50px'}">
 
+        <drag-scroll #nav>
+            <img drag-scroll-item src="/assets/imgs/kuba.jpg" />
+            <img drag-scroll-item src="/assets/imgs/kuba.jpg" />
+            <img drag-scroll-item src="/assets/imgs/kuba.jpg" />
+          </drag-scroll>
+          <button (click)="moveLeft()">Left</button>
+          <button (click)="moveRight()">Right</button>
+          <button (click)="moveTo(2)">Last</button>
     </div>
 </div>

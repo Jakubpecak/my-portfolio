@@ -32,6 +32,8 @@ import { ServiceComponent } from './components/main/my-profile/service/service.c
 import { PopupComponent } from './components/shared/popup/popup.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { PortfolioComponent } from './components/main/my-profile/portfolio/portfolio.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +71,8 @@ import { PortfolioComponent } from './components/main/my-profile/portfolio/portf
     MatStepperModule,
     MatIconModule,
     MatProgressBarModule,
-    MatDialogModule
+    MatDialogModule,
+    DragScrollModule
   ],
   providers: [
   ],
