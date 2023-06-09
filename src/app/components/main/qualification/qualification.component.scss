@@ -41,7 +41,12 @@
   ::ng-deep .qualification-road-education .mat-step .mat-step-label {
     position: relative!important;
     left: -187px!important;
+    overflow: visible;
   }
+
+  // ::ng-deep .qualification-road-education .mat-step:first-child .mat-step-text-label {
+  //   margin: 0 25px 0 -25px;
+  // }
 
   p {
     font-size: 12px;
