@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { checkboxRequired } from 'src/app/components/Validators/checkboxRequired';
 import { required } from 'src/app/components/Validators/required';
 
 @Component({
@@ -10,6 +11,7 @@ import { required } from 'src/app/components/Validators/required';
 export class ContactFormComponent implements OnInit {
   form!: UntypedFormGroup;
   isChecked: boolean = false;
+  isFormValid = false;
 
   constructor(private fb: UntypedFormBuilder) {
   }
@@ -17,18 +19,19 @@ export class ContactFormComponent implements OnInit {
   ngOnInit(): void {
     this.setFormValue();
 
-    this.form.valueChanges.subscribe((data) => {
+    this.form.valueChanges.subscribe(() => {
+      this.isFormValid = this.form.valid;
       console.log(this.form);
     });
   }
 
   setFormValue() {
     this.form = this.fb.group({
-      name: ['', required('To pole jest wymagane')],
-      email: ['', [required('To pole jest wymagane')]],
-      phone: ['', [required('To pole jest wymagane')]],
-      description: ['', [required('To pole jest wymagane')]],
-      accept: [false]
+      name: ['', required('Name is required.')],
+      email: ['', [required('Email is required.')]],
+      phone: ['', [required('Phone is required.')]],
+      description: ['', [required('Description is required.')]],
+      accept: [false, checkboxRequired()]
     });
   }
 
@@ -37,11 +40,16 @@ export class ContactFormComponent implements OnInit {
       this.form.get(key)?.markAsDirty();
     });
 
-    if (this.form.valid) {
-      console.log('test')
+    if (this.isFormValid) {
+      console.log('send');
+
+      this.form.reset();
+      this.isFormValid = false;
     }
-    
   }
 
+  get accept() {
+    return this.form.get('accept');
+  }
 
 }

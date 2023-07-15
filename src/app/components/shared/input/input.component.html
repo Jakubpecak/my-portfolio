@@ -23,4 +23,14 @@
     [max]="max"
     [min]="min"
     >
+    <textarea
+    *ngIf="type === 'textarea'"
+    #field
+    matInput     
+    [type]="type"
+    [formControl]="control"
+    [placeholder]="placeholder"
+    (focusOut)="focusOut.emit(true)"
+    >
+    </textarea>
 </mat-form-field>

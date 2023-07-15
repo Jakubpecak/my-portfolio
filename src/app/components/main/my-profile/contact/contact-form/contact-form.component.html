@@ -21,7 +21,7 @@
     <app-error [control]="form.get('phone')">
         <app-input
         id="phone"
-        [type]="'text'"
+        [type]="'number'"
         [control]="form.get('phone')"
         [label]="'Phone'"
         ></app-input>
@@ -30,18 +30,16 @@
     <app-error [control]="form.get('description')">
         <app-input
         id="description"
-        [type]="'text'"
+        [type]="'textarea'"
         [control]="form.get('description')"
         [label]="'Description'"
         ></app-input>
     </app-error>
 
-    <app-error [control]="form.get('accept')">
-        <mat-checkbox formControlName="accept">Accept</mat-checkbox>
-    </app-error>
-
-
-    <button type="submit" [ngClass]="this.form.valid ? 'validBtn' : 'invalidBtn'">Send</button>
+    <div [ngStyle]="{'display' : 'flex', 'flex-direction' : 'column', 'gap' : '20px'}">
+        <mat-checkbox formControlName="accept" [ngClass]="{'error': accept?.invalid && (accept?.dirty || accept?.touched)}">Accept</mat-checkbox>
+        <button type="submit" [ngClass]="isFormValid ? 'validBtn' : 'invalidBtn'">Send</button>
+    </div>
 
 
 </form>

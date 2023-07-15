@@ -12,10 +12,10 @@ export class CarouselHolderComponent {
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
-    center: true,
+    mouseDrag: true,
+    touchDrag: false,
+    pullDrag: false,
     dots: true,
-    autoHeight: true,
-    autoWidth: true,
     responsive: {
       0: {
         items: 1,

@@ -82,4 +82,10 @@ button {
     bottom: 0;
     right: 50%;
     transform: translate(50%, 50%);
+    margin: -40px 0;
+}
+
+textarea {
+    resize: none!important;
+    height: 100px;
 }

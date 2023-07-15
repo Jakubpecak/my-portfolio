@@ -35,6 +35,8 @@ import { PortfolioComponent } from './components/main/my-profile/portfolio/portf
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselHolderComponent } from './components/shared/carousel-holder/carousel-holder.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import { CarouselHolderComponent } from './components/shared/carousel-holder/car
     MatProgressBarModule,
     MatDialogModule,
     DragScrollModule,
-    CarouselModule
+    CarouselModule,
+    MatTooltipModule,
+    MatButtonModule
   ],
   providers: [
   ],

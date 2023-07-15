@@ -1,23 +1,9 @@
 :host {
-  ::ng-deep .mat-step-header {
-    overflow: visible!important;
-  }
-
   .large-height {
     height: 460px;
   }
   .low-height {
     height: 390px;
-  }
-
-  ::ng-deep .qualification-road-education .mat-step
-    .mat-vertical-stepper-content {
-    overflow: visible!important;
-    .mat-vertical-content {
-      position: relative!important;
-      left: -172px !important;
-      width: 172px;
-    }
   }
 
   .qualification-title-education, .qualification-title-work {
@@ -26,27 +12,14 @@
 
   .qualification-road {
     position: relative;
+    width: 210px;
 
     .qualification-road-education, .qualification-road-work  {
       position: absolute;
-      left: -35px;
+      left: 0;
       top: 0;
     }
   }
-
-  ::ng-deep .mat-step-header:hover, ::ng-deep .mat-step-header-ripple:hover {
-    background-color: transparent!important;
-  }
-
-  ::ng-deep .qualification-road-education .mat-step .mat-step-label {
-    position: relative!important;
-    left: -187px!important;
-    overflow: visible;
-  }
-
-  // ::ng-deep .qualification-road-education .mat-step:first-child .mat-step-text-label {
-  //   margin: 0 25px 0 -25px;
-  // }
 
   p {
     font-size: 12px;

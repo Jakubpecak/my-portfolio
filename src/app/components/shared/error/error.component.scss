@@ -16,20 +16,19 @@
     position: relative;
     display: flex;
     padding: 10px;
-    background-color: red;
-    color: black;
+    color: red;
     font-size: 1rem;
     border-radius: 0 0 4px 4px;
     top: -20px;
     z-index: 0;
-    animation: 0.3s ease-out showError forwards;
+    animation: 0.5s ease-out showError forwards;
 }
 
 @keyframes showError {
     0% {
         display: none;
         opacity: 0;
-        transform: translateY(-100%);
+        transform: translateX(100%);
     }
     75% {
         opacity: 0;
@@ -37,8 +36,22 @@
     100% {
         display: block;
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
 
+::ng-deep .mat-form-field.mat-form-field-invalid {
+    .mat-input-element {
+        color: #3f51b5;
+    }
+    .mat-form-field-label {
+        color: #3f51b5;
+        .mat-form-field-required-marker {
+            color: #3f51b5;
+        }
+    }
+    .mat-form-field-ripple {
+        background-color: #3f51b5;
+    }
+}
