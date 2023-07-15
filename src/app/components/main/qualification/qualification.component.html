@@ -3,11 +3,11 @@
     <h3 class="center-txt pb">My personal journey</h3>
     <div class="qualification col" [ngStyle]="{'align-items' : 'center'}">
         <div class="qualification-title row" [ngStyle]="{'gap': '50px'}">
-            <div class="qualification-title-education row" (click)="isWorkOpen = false">
+            <div class="qualification-title-education row" (click)="isWorkOpen = false" [ngClass]="!isWorkOpen ? 'active' : 'not-active'">
                 <mat-icon>book</mat-icon>
                 <h4 #educationTitle>Education</h4>
             </div>
-            <div class="qualification-title-work row" (click)="isWorkOpen = true">
+            <div class="qualification-title-work row" (click)="isWorkOpen = true" [ngClass]="isWorkOpen ? 'active' : 'not-active'">
                 <mat-icon>work</mat-icon>
                 <h4 #workTitle>Work</h4>
             </div>

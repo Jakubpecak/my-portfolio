@@ -37,6 +37,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselHolderComponent } from './components/shared/carousel-holder/carousel-holder.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SnackbarComponent } from './components/shared/snackbar/snackbar.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,8 @@ import { MatButtonModule } from '@angular/material/button';
     ServiceComponent,
     PopupComponent,
     PortfolioComponent,
-    CarouselHolderComponent
+    CarouselHolderComponent,
+    SnackbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,9 +84,12 @@ import { MatButtonModule } from '@angular/material/button';
     DragScrollModule,
     CarouselModule,
     MatTooltipModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule,
+    MatSnackBarModule
   ],
   providers: [
+    SnackbarComponent,
   ],
   bootstrap: [AppComponent]
 })

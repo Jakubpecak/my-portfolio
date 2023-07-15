@@ -23,6 +23,10 @@
         gap: 20px;
 
     }
+    button:hover i  {
+        transform: rotate(90deg);
+        transition: all 0.5s;
+    }
 }
 
 .fa-hand-point-right {

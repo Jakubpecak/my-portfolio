@@ -1,6 +1,9 @@
 :host {
+    .row {
+        gap: 20px;
+    }
     .validBtn {
-        background-color: blueviolet;
+        background-color: #3f51b5;
         color: #fff;
     }
     .invalidBtn {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-my-profile',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyProfileComponent implements OnInit {
   isLoading: boolean = true;
+  showScrollButton: boolean = false;
 
   constructor() { }
 
@@ -14,6 +15,15 @@ export class MyProfileComponent implements OnInit {
     setTimeout(() => {
       this.isLoading = false;
     }, 3000);
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: Event) {
+    this.showScrollButton = window.scrollY > 0;
+  }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
   }
 
 }

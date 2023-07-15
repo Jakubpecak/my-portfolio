@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
 import { checkboxRequired } from 'src/app/components/Validators/checkboxRequired';
 import { required } from 'src/app/components/Validators/required';
+
+import { SnackbarComponent } from 'src/app/components/shared/snackbar/snackbar.component';
 
 @Component({
   selector: 'app-contact-form',
@@ -13,7 +15,7 @@ export class ContactFormComponent implements OnInit {
   isChecked: boolean = false;
   isFormValid = false;
 
-  constructor(private fb: UntypedFormBuilder) {
+  constructor(private fb: UntypedFormBuilder, public snackBar: SnackbarComponent) {
   }
 
   ngOnInit(): void {
@@ -42,7 +44,8 @@ export class ContactFormComponent implements OnInit {
 
     if (this.isFormValid) {
       console.log('send');
-
+      
+      this.snackBar.openSnackBar();
       this.form.reset();
       this.isFormValid = false;
     }

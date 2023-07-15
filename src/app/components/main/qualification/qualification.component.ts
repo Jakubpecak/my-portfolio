@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class QualificationComponent implements OnInit {
   index = 0;
   isWorkOpen: boolean = true;
-  myColor: string = "white";
 
   constructor() {}
 

@@ -1,5 +1,7 @@
 .container {
     padding: 50px 100px;
+    max-width: 1600px;
+    margin: auto;
 }
 
 .row {
@@ -32,4 +34,7 @@
 }
 .main-color {
     color: #3f51b5;
+}
+.secondary-color {
+    color: #fff;
 }
