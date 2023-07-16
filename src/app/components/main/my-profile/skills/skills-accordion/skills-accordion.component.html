@@ -1,4 +1,4 @@
-<cdk-accordion class="accordion">
+<cdk-accordion class="accordion" id="skill">
   <cdk-accordion-item
     #accordionItem="cdkAccordionItem"
     class="accordion-item"
@@ -38,6 +38,7 @@
         <ng-container *ngFor="let text of textList; let i = index">
           <li [ngStyle]="{ padding: '15px 0 5px 0' }">{{ text }}<span>
             <app-animated-counter
+            *ngIf="animateCalled"
             [startValue]="0"
             [endValue]="progressList[i]"
             [duration]="1500">

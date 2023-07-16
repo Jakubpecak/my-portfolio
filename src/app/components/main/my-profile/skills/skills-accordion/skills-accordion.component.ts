@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-skills-accordion',
@@ -10,13 +10,24 @@ export class SkillsAccordionComponent implements OnInit {
   @Input() textList: string[] = [];
   @Input() progressList: number[] = [];
   expandedIndex = 0;
+  animateCalled: boolean = false;
 
-  constructor() { }
+  constructor(private elementRef: ElementRef) { }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.animateProgressBars();
-    }, 0);
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    if (!this.animateCalled) {
+      const skillElement = this.elementRef.nativeElement.querySelector('#skill');
+      const windowBottom = window.innerHeight + window.scrollY;
+  
+      if (skillElement && windowBottom >= skillElement.offsetTop) {
+        this.animateProgressBars();
+        this.animateCalled = true;
+      }
+    }
   }
 
   animateProgressBar(targetElement: HTMLElement, targetValue: number) {
@@ -29,7 +40,7 @@ export class SkillsAccordionComponent implements OnInit {
       if (progress >= targetValue) {
         clearInterval(intervalId);
       }
-    }, 20); // Adjust the interval duration for smoother animation
+    }, 20);
   }
 
   animateProgressBars() {
