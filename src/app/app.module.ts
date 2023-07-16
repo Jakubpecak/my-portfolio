@@ -40,6 +40,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SnackbarComponent } from './components/shared/snackbar/snackbar.component';
+import { AnimatedCounterComponent } from './components/shared/animated-counter/animated-counter.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { SnackbarComponent } from './components/shared/snackbar/snackbar.compone
     PortfolioComponent,
     CarouselHolderComponent,
     SnackbarComponent,
+    AnimatedCounterComponent,
   ],
   imports: [
     BrowserModule,

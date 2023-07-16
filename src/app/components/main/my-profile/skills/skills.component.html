@@ -3,14 +3,10 @@
     <h3 class="center-txt pb">My technical level</h3>
     <div class="skills" [ngStyle]="{'display': 'flex', 'justify-content': 'center', 'gap': '200px'}">
         <div class="skills-left-wrapper">
-            <app-skills-accordion [title]="leftWrapTitle" [textList]="leftWrapText" [progressList]="leftProgressList">
-
-            </app-skills-accordion>
+            <app-skills-accordion [title]="leftWrapTitle" [textList]="leftWrapText" [progressList]="leftProgressList"></app-skills-accordion>
         </div>
         <div class="skills-right-wrapper">
-            <app-skills-accordion [title]="rightWrapTitle" [textList]="rightWrapText" [progressList]="rightProgressList">
-
-            </app-skills-accordion>
+            <app-skills-accordion [title]="rightWrapTitle" [textList]="rightWrapText" [progressList]="rightProgressList"></app-skills-accordion>
         </div>
     </div>
 </div>

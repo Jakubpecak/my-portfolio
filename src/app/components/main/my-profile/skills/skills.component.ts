@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class SkillsComponent implements OnInit {
   leftWrapTitle: string = 'Frontend developer';
   leftWrapText: string[] = ['HTML5', 'Css/Sass', 'Javascript/Typescript', 'Angular', 'Git'];
-  leftProgressList: string[] = ['80', '80', '60', '60', '40'];
+  leftProgressList: number[] = [80, 80, 60, 60, 40];
 
   rightWrapTitle: string = 'Courses and others';
   rightWrapText: string[] = ['Bootcamp Junior Java Developer', 'Wordpress', 'Responsive Web Design', 'Figma', 'Adobe XD'];
-  rightProgressList: string[] = ['40', '80', '80', '40', '40'];
+  rightProgressList: number[] = [40, 80, 80, 40, 40];
 
   constructor() {}
 

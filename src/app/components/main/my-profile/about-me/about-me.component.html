@@ -13,20 +13,40 @@
             </p>
             <div class="about-content-details row">
                 <div class="about-content-details-item">
-                    <h5 class="center-txt">08+</h5>
+                    <app-animated-counter
+                    [startValue]="0"
+                    [endValue]="8"
+                    [duration]="2000"
+                    [isStyled]="true"
+                    >
+                    </app-animated-counter>
                     <p class="center-txt">Years<br>experience</p>
                 </div>
                 <div class="about-content-details-item">
-                    <h5 class="center-txt">20+</h5>
+                    <app-animated-counter
+                    [startValue]="0"
+                    [endValue]="20"
+                    [duration]="2000"
+                    [isStyled]="true"
+                    >
+                    </app-animated-counter>
                     <p class="center-txt">Completed<br>projects</p>
                 </div>
                 <div class="about-content-details-item">
-                    <h5 class="center-txt">05+</h5>
+                    <app-animated-counter
+                    [startValue]="0"
+                    [endValue]="5"
+                    [duration]="2000"
+                    [isStyled]="true"
+                    >
+                    </app-animated-counter>
                     <p class="center-txt">Companies<br>worked</p>
                 </div>
             </div>
             <div class="about-content-cv center-txt">
-                <button mat-raised-button color="primary">Download CV <i class="fas fa-download"></i></button>
+                <a [href]="'assets/Jakub-Pęcak.pdf'" download="Jakub-Pęcak.pdf">
+                    <button mat-raised-button color="primary">Download CV <i class="fas fa-download"></i></button>
+                </a>
             </div>
         </div>
     </div>
