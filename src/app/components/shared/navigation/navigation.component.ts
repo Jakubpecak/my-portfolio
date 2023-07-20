@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
+  isSticky: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+      if (window.scrollY > 0) {
+        this.isSticky = true;
+      } else {
+        this.isSticky = false;
+      }
   }
 
 }

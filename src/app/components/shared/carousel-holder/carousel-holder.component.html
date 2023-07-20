@@ -1,9 +1,9 @@
 <div class="wrapper">
     <div class="left">
         <owl-carousel-o [options]="customOptions">
-            <ng-container *ngFor="let slide of apiData">
-                <ng-template class="slide" carouselSlide [id]="slide.id">
-                <img [src]="slide.url" [alt]="slide.id" [title]="slide.id">
+            <ng-container *ngFor="let website of websiteList">
+                <ng-template class="slide" carouselSlide [id]="website.id">
+                <img [src]="website.url" [alt]="website.id" [title]="website.id">
                 </ng-template>
             </ng-container>
         </owl-carousel-o>
@@ -15,7 +15,7 @@
             <button
             matTooltip="To be continued"
             class="tooltip"
-            >Check
+            >Check <i class="fas fa-lock"></i>
             </button>
         </div>
     </div>

@@ -1,11 +1,14 @@
-<nav class="nav-container">
+<nav class="nav-container" [ngClass]="{ 'isSticky' : isSticky }">
     <div class="nav">
         <div class="nav-logo center main-color" routerLink="/">Kuba</div>
         <div class="nav-menu center">
             <a class="nav-menu-item main-color" router>Home</a>
-            <a class="nav-menu-item">About me</a>
-            <a class="nav-menu-item">Skills</a>
-            <a class="nav-menu-item">Contact</a>
+            <a href="#about" class="nav-menu-item">About me</a>
+            <a href="#skills" class="nav-menu-item">Skills</a>
+            <a href="#qualification" class="nav-menu-item">Qualification</a>
+            <a href="#services" class="nav-menu-item">Services</a>
+            <a href="#portfolio" class="nav-menu-item">Portfolio</a>
+            <a href="#contact" class="nav-menu-item">Contact</a>
             <a class="nav-menu-item icon">
                 <i class="far fa-moon"></i>
             </a>

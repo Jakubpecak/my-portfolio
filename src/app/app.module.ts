@@ -41,6 +41,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SnackbarComponent } from './components/shared/snackbar/snackbar.component';
 import { AnimatedCounterComponent } from './components/shared/animated-counter/animated-counter.component';
+import { LightboxModule } from 'ngx-lightbox';
+import { FileSaverModule } from 'ngx-filesaver';
 
 @NgModule({
   declarations: [
@@ -88,7 +90,9 @@ import { AnimatedCounterComponent } from './components/shared/animated-counter/a
     MatTooltipModule,
     MatButtonModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    LightboxModule,
+    FileSaverModule
   ],
   providers: [
     SnackbarComponent,

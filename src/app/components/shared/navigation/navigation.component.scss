@@ -1,6 +1,7 @@
 :host {
     .nav-container {
         padding: 50px 100px;
+        transition: all 0.5s ease-in-out; 
     }
     .nav {
         display: flex;
@@ -20,5 +21,17 @@
                 color: #3f51b5;
             }
         }
+    }
+
+    .isSticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: -webkit-fill-available;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        padding: 25px 100px;
+        transition: all 0.5s ease-in-out;
     }
 }

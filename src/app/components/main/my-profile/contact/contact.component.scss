@@ -8,6 +8,16 @@
 
     .contact-left {
         align-items: center;
+
+        &-email:hover, &-phone:hover, &-location:hover {
+            color: #3f51b5!important;
+        }
+        &-email:hover i, &-phone:hover i, &-location:hover i {
+            animation-name: rotate;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
     }
     .contact-left, .contact-right {
         width: 50%;
@@ -22,4 +32,16 @@
         justify-content: start;
         padding-bottom: 50px;
     }
+
+    @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(30deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
 }
