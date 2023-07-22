@@ -9,7 +9,10 @@
             <a href="#services" class="nav-menu-item">Services</a>
             <a href="#portfolio" class="nav-menu-item">Portfolio</a>
             <a href="#contact" class="nav-menu-item">Contact</a>
-            <a class="nav-menu-item icon">
+            <a class="nav-menu-item icon" *ngIf="!isDarkModeOn" (click)="onToggle(); isDarkModeOn = true">
+                <i class="far fa-sun"></i>
+            </a>
+            <a class="nav-menu-item icon" *ngIf="isDarkModeOn" (click)="onToggle(); isDarkModeOn = false">
                 <i class="far fa-moon"></i>
             </a>
         </div>

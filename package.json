@@ -22,6 +22,7 @@
     "@angular/router": "^16.0.5",
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@types/file-saver": "^2.0.5",
+    "angular-dark-mode": "^3.1.0",
     "animate.css": "^4.1.1",
     "file-saver": "^2.0.5",
     "ngx-drag-scroll": "^16.0.0",

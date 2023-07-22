@@ -1,3 +1,30 @@
 @import 'styles/core.scss';
 @import 'styles/mixins.scss';
 @import 'styles/shared.scss';
+
+body.dark-mode {
+    background-color: #2d3436;
+    color: #dfe6e9;
+}
+  
+body.light-mode {
+    background-color: #dfe6e9;
+    color: #2d3436;
+}
+
+body:not(.dark-mode-preloading) {
+    transition: all 0.3s linear;
+}
+
+body.dark-mode h5, body.dark-mode p, body.dark-mode a {
+    color: #dfe6e9;
+}
+
+body.dark-mode mat-step-header, body.dark-mode .mat-step, body.dark-mode .mat-step-text-label {
+    background-color: #2d3436;
+    color: #dfe6e9;
+}
+
+body.dark-mode mat-label {
+    color: #dfe6e9!important; 
+}
