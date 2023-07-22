@@ -8,18 +8,18 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class NavigationComponent implements OnInit {
   isSticky: boolean = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
 
   @HostListener('window:scroll')
   onWindowScroll() {
-      if (window.scrollY > 0) {
-        this.isSticky = true;
-      } else {
-        this.isSticky = false;
-      }
+    if (window.scrollY > 0) {
+      this.isSticky = true;
+    } else {
+      this.isSticky = false;
+    }
   }
 
 }

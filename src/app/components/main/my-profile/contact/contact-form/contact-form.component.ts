@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
+import { debounceTime } from 'rxjs';
 import { checkboxRequired } from 'src/app/components/Validators/checkboxRequired';
+import { email } from 'src/app/components/Validators/email';
+import { max } from 'src/app/components/Validators/max';
+import { min } from 'src/app/components/Validators/min';
 import { required } from 'src/app/components/Validators/required';
 
 import { SnackbarComponent } from 'src/app/components/shared/snackbar/snackbar.component';
+import { Message } from 'src/app/models/message';
+import { MyProfileService } from 'src/app/services/my-profile.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -15,24 +21,23 @@ export class ContactFormComponent implements OnInit {
   isChecked: boolean = false;
   isFormValid = false;
 
-  constructor(private fb: UntypedFormBuilder, public snackBar: SnackbarComponent) {
+  constructor(private fb: UntypedFormBuilder, public snackBar: SnackbarComponent, private myProfileService: MyProfileService) {
   }
 
   ngOnInit(): void {
     this.setFormValue();
 
-    this.form.valueChanges.subscribe(() => {
+    this.form.valueChanges.pipe(debounceTime(300)).subscribe(() => {
       this.isFormValid = this.form.valid;
-      console.log(this.form);
     });
   }
 
   setFormValue() {
     this.form = this.fb.group({
-      name: ['', required('Name is required.')],
-      email: ['', [required('Email is required.')]],
-      phone: ['', [required('Phone is required.')]],
-      description: ['', [required('Description is required.')]],
+      name: ['', [required('Name is required.'), min(3, 'Name is too short.'), max(15, 'Name too long.')]],
+      email: ['', [required('Email is required.'), email('Invalid email format.'), max(50, 'Email too long.')]],
+      phone: ['', [required('Phone is required.'), max(15, 'Phone is too long.')]],
+      description: ['', [required('Description is required.'), min(10, 'Min. 10 characters.'), max(500, 'Max. 500 characters.')]],
       accept: [false, checkboxRequired()]
     });
   }
@@ -43,8 +48,15 @@ export class ContactFormComponent implements OnInit {
     });
 
     if (this.isFormValid) {
-      console.log('send');
-      
+      const messageData: Message = {
+        name: this.form.get('name')?.value,
+        email: this.form.get('email')?.value,
+        phone: this.form.get('phone')?.value,
+        description: this.form.get('description')?.value
+      }
+
+      this.myProfileService.sendMessage(messageData).subscribe();
+
       this.snackBar.openSnackBar();
       this.form.reset();
       this.isFormValid = false;
