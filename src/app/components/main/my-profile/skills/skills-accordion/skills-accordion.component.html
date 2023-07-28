@@ -9,8 +9,8 @@
     [attr.aria-controls]="'accordion-body-' + 1"
   >
     <div class="accordion-wrapper">
-      <i class="fas fa-code" *ngIf="title === 'Frontend developer'"></i>
-      <i class="fas fa-laptop-code" *ngIf="title !== 'Frontend developer'"></i>
+      <i class="fas fa-code" *ngIf="title === 'Frontend developer'" [ngClass]="{'open' : !accordionItem.expanded}"></i>
+      <i class="fas fa-laptop-code" *ngIf="title !== 'Frontend developer'" [ngClass]="{'open' : !accordionItem.expanded}"></i>
       <div
         class="accordion-item-header"
         (click)="accordionItem.toggle()"
@@ -18,7 +18,7 @@
       >
         <div>
           <h3>{{ title }}</h3>
-          <h5>{{ title }}</h5>
+          <h4>{{ title }}</h4>
         </div>
         <span class="accordion-item-description">
           <i class="fas fa-chevron-down" *ngIf="!accordionItem.expanded"></i>

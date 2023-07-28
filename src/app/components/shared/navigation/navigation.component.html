@@ -1,4 +1,4 @@
-<nav class="nav-container" [ngClass]="{ 'isSticky' : isSticky }">
+<nav class="nav-container">
     <div class="nav">
         <div class="nav-logo center main-color" routerLink="/">Kuba</div>
         <div class="nav-menu center">
@@ -10,10 +10,10 @@
             <a href="#portfolio" class="nav-menu-item">Portfolio</a>
             <a href="#contact" class="nav-menu-item">Contact</a>
             <a class="nav-menu-item icon" *ngIf="!isDarkModeOn" (click)="onToggle(); isDarkModeOn = true">
-                <i class="far fa-sun"></i>
+                <i class="fas fa-sun"></i>
             </a>
             <a class="nav-menu-item icon" *ngIf="isDarkModeOn" (click)="onToggle(); isDarkModeOn = false">
-                <i class="far fa-moon"></i>
+                <i class="fas fa-moon"></i>
             </a>
         </div>
     </div>

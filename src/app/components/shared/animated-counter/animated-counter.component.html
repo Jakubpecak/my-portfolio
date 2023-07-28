@@ -1,2 +1,2 @@
-<h5 [@counterAnimation]="animationState" class="counter" *ngIf="!isStyled">{{ counterValue }}%</h5>
+<h5 [@counterAnimation]="animationState" class="counter" *ngIf="!isStyled" [ngStyle]="{'font-weight' : '500'}">{{ counterValue }}%</h5>
 <p [@counterAnimation]="animationState" class="counter" *ngIf="isStyled">{{ counterValue }}+</p>

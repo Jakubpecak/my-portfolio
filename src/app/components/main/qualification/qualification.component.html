@@ -5,11 +5,11 @@
         <div class="qualification-title row" [ngStyle]="{'gap': '50px'}">
             <div class="qualification-title-education row" (click)="isWorkOpen = false" [ngClass]="!isWorkOpen ? 'active' : 'not-active'">
                 <mat-icon>book</mat-icon>
-                <h4 #educationTitle>Education</h4>
+                <h4 #educationTitle [ngStyle]="{'font-weight' : '500'}">Education</h4>
             </div>
             <div class="qualification-title-work row" (click)="isWorkOpen = true" [ngClass]="isWorkOpen ? 'active' : 'not-active'">
                 <mat-icon>work</mat-icon>
-                <h4 #workTitle>Work</h4>
+                <h4 #workTitle [ngStyle]="{'font-weight' : '500'}">Work</h4>
             </div>
         </div>
         <div class="qualification-road">

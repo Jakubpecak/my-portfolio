@@ -16,7 +16,7 @@ body:not(.dark-mode-preloading) {
     transition: all 0.3s linear;
 }
 
-body.dark-mode h5, body.dark-mode p, body.dark-mode a {
+body.dark-mode h5, body.dark-mode h4, body.dark-mode p, body.dark-mode a {
     color: #dfe6e9;
 }
 
@@ -25,6 +25,22 @@ body.dark-mode mat-step-header, body.dark-mode .mat-step, body.dark-mode .mat-st
     color: #dfe6e9;
 }
 
-body.dark-mode mat-label {
+body.dark-mode mat-label, body.dark-mode .not-active {
     color: #dfe6e9!important; 
+}
+
+body.dark-mode .service-box {
+    border: 2px solid #dfe6e9!important;
+}
+
+body.dark-mode .mat-checkbox-inner-container {
+    background-color: #dfe6e9;
+}
+
+body.dark-mode .mat-step-header .mat-step-icon {
+    background-color: darkgray;
+}
+
+body.dark-mode .mat-step-icon-selected, body.dark-mode .mat-step-icon-state-edit {
+    background-color: #3f51b5!important;
 }

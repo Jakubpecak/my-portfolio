@@ -21,14 +21,4 @@ export class NavigationComponent implements OnInit {
   onToggle(): void {
     this.darkModeService.toggle();
   }
-
-  @HostListener('window:scroll')
-  onWindowScroll() {
-    if (window.scrollY > 0) {
-      this.isSticky = true;
-    } else {
-      this.isSticky = false;
-    }
-  }
-
 }

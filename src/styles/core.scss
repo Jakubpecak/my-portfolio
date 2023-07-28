@@ -19,12 +19,14 @@ body {
 
 ol, ul {
     list-style: none;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
     color: black;
     cursor: pointer;
+    font-size: 1.6rem;
 }
 
 img {
@@ -53,9 +55,26 @@ h3 {
     font-size: 2.5rem!important;
 }
 
+h4 {
+    font-size: 1.8rem!important;   
+}
+
+h5 {
+    font-size: 1.5rem!important;
+}
+
 p {
     font-size: 1.8rem;
 }
+
+li {
+    font-size: 1.5rem;
+}
+
+.mat-step-text-label, span {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif!important;
+}   
 
 button {
     width: fit-content;
@@ -106,4 +125,12 @@ textarea {
 
 iframe {
     border-radius: 8px!important;
+}
+
+mat-step-header, .mat-step {
+    background-color: #dfe6e9;
+}
+
+.owl-dot.active span {
+    background-color: #3f51b5!important;
 }

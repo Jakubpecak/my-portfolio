@@ -4,13 +4,15 @@
             gap: 50px;
             justify-content: center;
             &-picture {
+                flex-basis: 50%;
                 img {
-                    width: 60%;
+                    width: 80%;
                     margin: 0 auto;
                     border-radius: 10px;
                 }
             }
             &-content {
+                flex-basis: 50%;
                 align-items: center;
                 justify-content: center;
                 p {

@@ -25,11 +25,18 @@
                 }
             }
 
-            .service-box-icon {
-                font-size: 25px;
-            } 
-            .service-box-view__more {
+            &-title {
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+
+            &-icon {
+                font-size: 2.5rem;
+            }
+
+            &-view__more {
                 cursor: pointer;
+                font-size: 1.6rem;
                 i {
                     padding-left: 8px;
                 }

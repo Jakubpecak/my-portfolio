@@ -7,8 +7,8 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   styleUrls: ['./animated-counter.component.scss'],
   animations: [
     trigger('counterAnimation', [
-      state('inactive', style({ opacity: 0.1, color: '#3f51b5' })),
-      state('active', style({ opacity: 1, color: '#000' })),
+      state('inactive', style({ opacity: 0.1 })),
+      state('active', style({ opacity: 1 })),
       transition('inactive => active', animate('2000ms ease-in')),
       transition('active => inactive', animate('2000ms ease-out'))
     ])
