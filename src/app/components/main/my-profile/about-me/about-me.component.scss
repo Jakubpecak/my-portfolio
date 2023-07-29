@@ -28,6 +28,12 @@
                         padding-bottom: 10px;
                     }
                 }
+                &-cv {
+                    button:hover i  {
+                        margin: 2px 0 -2px 0;
+                        transition: all 0.3s;
+                    }
+                }
             }
         }
     }

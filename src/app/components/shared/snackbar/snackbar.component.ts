@@ -16,13 +16,22 @@ export class SnackbarComponent {
 
   constructor(public _snackBar: MatSnackBar) {}
 
-  openSnackBar() {
-    this._snackBar.open('Message was sent', 'Close', {
-      horizontalPosition: this.horizontalPosition,
-      verticalPosition: this.verticalPosition,
-      duration: 2000,
-      panelClass: ['snackbar']
-    });
+  openSnackBar(message: string, error?: boolean) {
+    if (error) {
+      this._snackBar.open(message, '', {
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+        duration: 2000,
+        panelClass: ['snackbar-error']
+      });
+    } else {
+      this._snackBar.open(message, '', {
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+        duration: 2000,
+        panelClass: ['snackbar-success']
+      });
+    }
   }
 
 }

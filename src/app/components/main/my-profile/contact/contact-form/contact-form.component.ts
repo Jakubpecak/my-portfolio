@@ -55,9 +55,11 @@ export class ContactFormComponent implements OnInit {
         description: this.form.get('description')?.value
       }
 
-      this.myProfileService.sendMessage(messageData).subscribe();
-
-      this.snackBar.openSnackBar();
+      this.myProfileService.sendMessage(messageData).subscribe(() => {
+        this.snackBar.openSnackBar('Message was sent.');
+      }, (_error) => {
+        this.snackBar.openSnackBar('Error occurred, please try again later.', true);
+      });
       this.form.reset();
       this.isFormValid = false;
     }

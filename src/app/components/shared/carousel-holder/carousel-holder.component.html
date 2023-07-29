@@ -11,11 +11,15 @@
     <div class="right">
         <div class="portfolio-content-box col">
             <h3>Modern Website</h3>
-            <p>Website adaptable to all devices with ui components and animated interactions.</p>
+            <p>
+                Dynamic website designed to seamlessly adapt to any screen size, 
+                offering intuitive UI components and engaging animated interactions.
+            </p>
             <button
+            (mouseenter)="showLockIcon = true" (mouseleave)="showLockIcon = false"
             matTooltip="To be continued"
             class="tooltip"
-            >Check <i class="fas fa-lock"></i>
+            >Check <i class="fas fa-lock" *ngIf="showLockIcon" [@fadeInOut]></i>
             </button>
         </div>
     </div>

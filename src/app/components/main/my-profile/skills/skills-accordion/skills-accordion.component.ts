@@ -52,6 +52,4 @@ export class SkillsAccordionComponent implements OnInit {
       this.animateProgressBar(targetElement, targetValue);
     }
   }
-
-
 }
