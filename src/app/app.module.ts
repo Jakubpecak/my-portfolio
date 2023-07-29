@@ -8,7 +8,7 @@ import { NavigationComponent } from './components/shared/navigation/navigation.c
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { MyProfileComponent } from './components/main/my-profile/my-profile.component';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutMeComponent } from './components/main/my-profile/about-me/about-me.component';
 import { SkillsComponent } from './components/main/my-profile/skills/skills.component';
@@ -43,6 +43,12 @@ import { SnackbarComponent } from './components/shared/snackbar/snackbar.compone
 import { AnimatedCounterComponent } from './components/shared/animated-counter/animated-counter.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { FileSaverModule } from 'ngx-filesaver';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -92,7 +98,14 @@ import { FileSaverModule } from 'ngx-filesaver';
     MatSelectModule,
     MatSnackBarModule,
     LightboxModule,
-    FileSaverModule
+    FileSaverModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     SnackbarComponent,
