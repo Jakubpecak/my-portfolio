@@ -1,3 +1,115 @@
 {
-    "description": "Frontend Developer z doświadczeniem w marketingu i reklamie. Dobra znajomość Angular, Sass, HTML i TypeScript. Nieustannie ucząc się nowych technologii, zawsze dążąc do doskonalenia."
+    "navigation": {
+        "logo-name": "Kuba",
+        "menu": {
+            "home": "Strona główna",
+            "about": "O mnie",
+            "skills": "Umiejętności",
+            "qualification": "Kwalifikacje",
+            "services": "Usługi",
+            "portfolio": "Portfolio",
+            "contact": "Kontakt"
+        }
+    },
+    "home": {
+        "profession": "Frontend developer",
+        "greeting": "Cześć, jestem",
+        "description": "Frontend Developer z doświadczeniem w marketingu i reklamie. Dobra znajomość Angular, Sass, HTML i TypeScript. Nieustannie uczący się nowych technologii, zawsze dążący do celu.",
+        "contact": "Kontakt"
+    },
+    "about": {
+        "title": "O mnie", 
+        "subtitle": "Wprowadzenie", 
+        "description": "Elastyczny, zmotywowany i pasjonujący się tworzeniem innowacyjnych rozwiązań dla klientów. Kluczowe mocne strony to umiejętność współpracy i rozwiązywania problemów. Zawsze gotowy do podejmowania nowych projektów i chętny do dalszego ich rozwoju.",
+        "years": "Wieloletnie<br>doświadczenie", 
+        "projects": "Zrealizowane<br>projekty", 
+        "companies": "Firmy<br>w których pracowałem", 
+        "download": "Pobierz CV"
+    },
+    "skills": {
+        "title": "Umiejętności", 
+        "title-2": "Frontend developer", 
+        "title-3": "Kursy i inne", 
+        "subtitle": "Mój poziom techniczny",
+        "experience": "doświadczenie z"
+    },
+    "qualification": {
+        "title": "Kwalifikacje", 
+        "subtitle": "Moja droga życiowa",
+        "education": "Edukacja",
+        "work": "Praca",
+        "school": "Liceum w Leżajsku",
+        "profession": "Inżynier środowiska",
+        "currently": "Obecnie",
+        "university": "Uniwersytet Rzeszowski",
+        "agency": "Agencja Interaktywna Testin"
+        
+    },
+    "services": {
+        "title": "Usługi", 
+        "subtitle": "Co oferuję",
+        "frontend": "Frontend<br>Developer",
+        "design": "Ui/Ux<br>Designer",
+        "branding": "Branding<br>Designer",
+        "view-more": "Zobacz więcej",
+        "popup": {
+            "title-1": "Frontend Developer", 
+            "title-2": "Ui/Ux Designer", 
+            "title-3": "Branding Designer", 
+            "text-1": "Rozwój interfejsu użytkownika.", 
+            "text-2": "Rozwój strony internetowej.", 
+            "text-3": "Tworzenie interaktywnych elementów UX.", 
+            "text-4": "Pozycjonowanie marki Twojej firmy."
+        }
+    },
+    "portfolio": {
+        "title": "Portfolio", 
+        "second-title": "Nowoczesna strona internetowa", 
+        "subtitle": "Najnowsze prace", 
+        "description": "Dynamiczna witryna zaprojektowana z myślą o płynnym dostosowywaniu się do każdego rozmiaru ekranu, oferująca intuicyjne komponenty interfejsu użytkownika i angażujące animowane interakcje.",
+        "check": "Sprawdź",
+        "tooltip": "W trakcie budowy"
+    },
+    "contact": {
+        "title": "Kontakt", 
+        "subtitle": "Skontaktuj się ze mną",
+        "call": "Zadzwoń",
+        "email": "Email",
+        "location": "Polska",
+        "accept": "Zaakceptuj",
+        "send": "Wyślij"
+    },
+    "footer": {
+        "about": "O mnie", 
+        "skills": "Umiejętności",
+        "contact": "Kontakt",
+        "rights": "Wszystkie prawa zastrzeżone"
+    },
+    "form": {
+        "name": "Imię", 
+        "email": "Email",
+        "phone": "Telefon",
+        "description": "Opis"
+    },
+    "button": {
+        "up": "Up"
+    },
+    "popup": {
+        "location": "Lokalizacja"
+    },
+    "errors": {
+        "required-name": "Imie jest wymagane.",
+        "required-email": "Email jest wymagany.",
+        "required-phone": "Telefon jest wymagany.",
+        "required-description": "Opis jest wymagany.",
+        "email": "Niewłaściwy format wiadomości.",
+        "min-name": "Imię jest za krótkie.",
+        "min-description": "Min. 10 znaków.",
+        "max-name": "Za długie imię.",
+        "max-email": "Za długi email.",
+        "max-phone": "Za długi telefon.",
+        "max-description": "Maks. 500 znaków.",
+        "message-failed": "Wystąpił błąd, spróbuj ponownie później.",
+        "message-success": "Wiadomość została wysłana."
+    }
 }

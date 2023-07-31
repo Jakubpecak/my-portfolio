@@ -1,3 +1,115 @@
 {
-    "description": "Frontend Developer with experience in marketing and advertising. Good knowledge of Angular, Sass, HTML and TypeScript. Constantly learning new technologies, always striving to improve."
+    "navigation": {
+        "logo-name": "Kuba",
+        "menu": {
+            "home": "Home",
+            "about": "About me",
+            "skills": "Skills",
+            "qualification": "Qualification",
+            "services": "Services",
+            "portfolio": "Portfolio",
+            "contact": "Contact"
+        }
+    },
+    "home": {
+        "profession": "Frontend developer",
+        "greeting": "Hi, I'm",
+        "description": "Frontend Developer with experience in marketing and advertising. Good knowledge of Angular, Sass, HTML and TypeScript. Constantly learning new technologies, always striving to improve.",
+        "contact": "Contact me"
+    },
+    "about": {
+        "title": "About me", 
+        "subtitle": "My introduction", 
+        "description": "Flexible, motivated, and passionate about creating innovative solutions for clients. Key strengths include cooperation and problem-solving abilities. Always ready to take on new projects and eager to develop them further.",
+        "years": "Years<br>experience", 
+        "projects": "Completed<br>projects", 
+        "companies": "Companie<br> worked", 
+        "download": "Download CV"
+    },
+    "skills": {
+        "title": "Skills", 
+        "title-2": "Frontend developer", 
+        "title-3": "Courses and others", 
+        "subtitle": "My technical level",
+        "experience": "experience with"
+    },
+    "qualification": {
+        "title": "Qualification", 
+        "subtitle": "My personal journey",
+        "education": "Education",
+        "work": "Work",
+        "school": "High school in Leżajsk",
+        "profession": "Environmental engineer",
+        "currently": "Currently",
+        "university": "University of Rzeszow",
+        "agency": "Testin Interactive Agency"
+        
+    },
+    "services": {
+        "title": "Services", 
+        "subtitle": "What i offer",
+        "frontend": "Frontend<br>Developer",
+        "design": "Ui/Ux<br>Designer",
+        "branding": "Branding<br>Designer",
+        "view-more": "View More",
+        "popup": {
+            "title-1": "Frontend Developer", 
+            "title-2": "Ui/Ux Designer", 
+            "title-3": "Branding Designer", 
+            "text-1": "I develop the user interface.", 
+            "text-2": "Web page development.", 
+            "text-3": "I create ux element interactions.", 
+            "text-4": "I position your company brand."
+        }
+    },
+    "portfolio": {
+        "title": "Portfolio", 
+        "second-title": "Modern Website", 
+        "subtitle": "Most recent work", 
+        "description": "Dynamic website designed to seamlessly adapt to any screen size, offering intuitive UI components and engaging animated interactions.",
+        "check": "Check",
+        "tooltip": "To be continued"
+    },
+    "contact": {
+        "title": "Contact me", 
+        "subtitle": "Get in touch",
+        "call": "Call me",
+        "email": "Email",
+        "location": "Poland",
+        "accept": "Accept",
+        "send": "Send"
+    },
+    "footer": {
+        "about": "About me", 
+        "skills": "Skills",
+        "contact": "Contact",
+        "rights": "All right reserved"
+    },
+    "form": {
+        "name": "Name", 
+        "email": "Email",
+        "phone": "Phone",
+        "description": "Description"
+    },
+    "button": {
+        "up": "Up"
+    },
+    "popup": {
+        "location": "Location"
+    },
+    "errors": {
+        "required-name": "Name is required.",
+        "required-email": "Email is required.",
+        "required-phone": "Phone is required.",
+        "required-description": "Description is required.",
+        "email": "Invalid email format.",
+        "min-name": "Name is too short.",
+        "min-description": "Min. 10 characters.",
+        "max-name": "Name too long.",
+        "max-email": "Email too long.",
+        "max-phone": "Phone is too long.",
+        "max-description": "Max. 500 characters.",
+        "message-failed": "Error occurred, please try again later.",
+        "message-success": "Message was sent."
+    }
 }

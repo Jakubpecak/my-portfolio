@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { debounceTime } from 'rxjs';
 import { checkboxRequired } from 'src/app/components/Validators/checkboxRequired';
 import { email } from 'src/app/components/Validators/email';
@@ -21,7 +22,8 @@ export class ContactFormComponent implements OnInit {
   isChecked: boolean = false;
   isFormValid = false;
 
-  constructor(private fb: UntypedFormBuilder, public snackBar: SnackbarComponent, private myProfileService: MyProfileService) {
+  constructor(private fb: UntypedFormBuilder, public snackBar: SnackbarComponent, 
+    private myProfileService: MyProfileService, private translate: TranslateService) {
   }
 
   ngOnInit(): void {
@@ -34,10 +36,14 @@ export class ContactFormComponent implements OnInit {
 
   setFormValue() {
     this.form = this.fb.group({
-      name: ['', [required('Name is required.'), min(3, 'Name is too short.'), max(15, 'Name too long.')]],
-      email: ['', [required('Email is required.'), email('Invalid email format.'), max(50, 'Email too long.')]],
-      phone: ['', [required('Phone is required.'), max(15, 'Phone is too long.')]],
-      description: ['', [required('Description is required.'), min(10, 'Min. 10 characters.'), max(500, 'Max. 500 characters.')]],
+      name: ['', [required('errors.required-name'), 
+      min(3, 'errors.min-name'), max(15, 'errors.max-name')]],
+      email: ['', [required('errors.required-email'), 
+      email('errors.email'), max(50, 'errors.max-email')]],
+      phone: ['', [required('errors.required-phone'), 
+      max(15, 'errors.max-phone')]],
+      description: ['', [required('errors.required-description'), 
+      min(10, 'errors.min-description'), max(500, 'errors.max-description')]],
       accept: [false, checkboxRequired()]
     });
   }
@@ -56,9 +62,9 @@ export class ContactFormComponent implements OnInit {
       }
 
       this.myProfileService.sendMessage(messageData).subscribe(() => {
-        this.snackBar.openSnackBar('Message was sent.');
+        this.snackBar.openSnackBar(this.translate.instant('errors.message-success'));
       }, (_error) => {
-        this.snackBar.openSnackBar('Error occurred, please try again later.', true);
+        this.snackBar.openSnackBar(this.translate.instant('errors.message-failed'), true);
       });
       this.form.reset();
       this.isFormValid = false;

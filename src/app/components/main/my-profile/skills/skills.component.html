@@ -1,6 +1,6 @@
 <div class="container col" id="skills">
-    <h2 class="center-txt">Skills</h2>
-    <h3 class="center-txt pb">My technical level</h3>
+    <h2 class="center-txt">{{ 'skills.title' | translate }}</h2>
+    <h3 class="center-txt pb">{{ 'skills.subtitle' | translate }}</h3>
     <div class="skills" [ngStyle]="{'display': 'flex', 'justify-content': 'center', 'gap': '200px'}">
         <div class="skills-left-wrapper">
             <app-skills-accordion [title]="leftWrapTitle" [textList]="leftWrapText" [progressList]="leftProgressList"></app-skills-accordion>

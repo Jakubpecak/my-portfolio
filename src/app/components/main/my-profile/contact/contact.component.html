@@ -1,27 +1,27 @@
 <div class="container col" id="contact">
-    <h2 class="center-txt">Contact me</h2>
-    <h3 class="center-txt pb">Get in touch</h3>
+    <h2 class="center-txt">{{ 'contact.title' | translate }}</h2>
+    <h3 class="center-txt pb">{{ 'contact.subtitle' | translate }}</h3>
     <div class="contact row center" [ngStyle]="{'gap': '50px'}">
         <div class="contact-left col">
             <div class="contact-left-phone row center-item">
                 <i class="fas fa-phone icon"></i>
                 <div>
-                    <h3>Call me</h3>
+                    <h3>{{ 'contact.call' | translate }}</h3>
                     <a href="tel:517181523">517-181-523</a>
                 </div>
             </div>
             <div class="contact-left-email row center-item">
                 <i class="fas fa-envelope icon"></i>
                 <div>
-                    <h3>Email</h3>
+                    <h3>{{ 'contact.email' | translate }}</h3>
                     <a href="mailto:jakub.pecak@o2.pl">jakub.pecak@o2.pl</a>
                 </div>
             </div>
             <div class="contact-left-location row center-item">
                 <i class="fas fa-location-arrow icon"></i>
                 <div>
-                    <h3>Poland</h3>
-                    <a (click)="openDialog('Location', true)">Rzeszów</a>
+                    <h3>{{ 'contact.location' | translate }}</h3>
+                    <a (click)="openDialog('popup.location', true)">Rzeszów</a>
                 </div>
             </div>
         </div>

@@ -17,8 +17,8 @@
         [ngStyle]="{ 'padding-bottom': '0' }"
       >
         <div>
-          <h3>{{ title[0] }}</h3>
-          <h4>{{ title[1] }}</h4>
+          <h3>{{ title[0] | translate }}</h3>
+          <h4>{{ title[1] | translate }}</h4>
         </div>
         <span class="accordion-item-description">
           <i class="fas fa-chevron-down" *ngIf="!accordionItem.expanded"></i>

@@ -6,7 +6,7 @@
             id="name"
             [type]="'text'"
             [control]="form.get('name')"
-            [label]="'Name'"
+            label="{{ 'form.name' | translate }}"
             ></app-input>
         </app-error>
     
@@ -15,7 +15,7 @@
             id="email"
             [type]="'text'"
             [control]="form.get('email')"
-            [label]="'Email'"
+            label="{{ 'form.email' | translate }}"
             ></app-input>
         </app-error>
     </div>
@@ -25,7 +25,7 @@
         id="phone"
         [type]="'number'"
         [control]="form.get('phone')"
-        [label]="'Phone'"
+        label="{{ 'form.phone' | translate }}"
         ></app-input>
     </app-error>
 
@@ -34,12 +34,12 @@
         id="description"
         [type]="'textarea'"
         [control]="form.get('description')"
-        [label]="'Description'"
+        label="{{ 'form.description' | translate }}"
         ></app-input>
     </app-error>
 
     <div [ngStyle]="{'display' : 'flex', 'flex-direction' : 'column', 'gap' : '20px'}">
-        <mat-checkbox color="primary" formControlName="accept" [ngClass]="{'error': accept?.invalid && (accept?.dirty || accept?.touched)}">Accept</mat-checkbox>
-        <button type="submit" [ngClass]="isFormValid ? 'validBtn' : 'invalidBtn'">Send</button>
+        <mat-checkbox color="primary" formControlName="accept" [ngClass]="{'error': accept?.invalid && (accept?.dirty || accept?.touched)}">{{ 'contact.accept' | translate }}</mat-checkbox>
+        <button type="submit" [ngClass]="isFormValid ? 'validBtn' : 'invalidBtn'">{{ 'contact.send' | translate }}</button>
     </div>
 </form>

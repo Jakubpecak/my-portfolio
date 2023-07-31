@@ -1,14 +1,14 @@
 <nav class="nav-container">
     <div class="nav">
-        <div class="nav-logo center main-color" routerLink="/">Kuba</div>
+        <div class="nav-logo center main-color" routerLink="/">{{ 'navigation.logo-name' | translate }}</div>
         <div class="nav-menu center">
-            <a class="nav-menu-item main-color" router>Home</a>
-            <a href="#about" class="nav-menu-item">About me</a>
-            <a href="#skills" class="nav-menu-item">Skills</a>
-            <a href="#qualification" class="nav-menu-item">Qualification</a>
-            <a href="#services" class="nav-menu-item">Services</a>
-            <a href="#portfolio" class="nav-menu-item">Portfolio</a>
-            <a href="#contact" class="nav-menu-item">Contact</a>
+            <a class="nav-menu-item main-color" router>{{'navigation.menu.home' | translate}}</a>
+            <a href="#about" class="nav-menu-item">{{'navigation.menu.about' | translate}}</a>
+            <a href="#skills" class="nav-menu-item">{{'navigation.menu.skills' | translate}}</a>
+            <a href="#qualification" class="nav-menu-item">{{'navigation.menu.qualification' | translate}}</a>
+            <a href="#services" class="nav-menu-item">{{'navigation.menu.services' | translate}}</a>
+            <a href="#portfolio" class="nav-menu-item">{{'navigation.menu.portfolio' | translate}}</a>
+            <a href="#contact" class="nav-menu-item">{{'navigation.menu.contact' | translate}}</a>
             <a class="nav-menu-item" (click)="changeToPolish(); isEnglishLang = false" *ngIf="isEnglishLang">En</a>
             <a class="nav-menu-item" (click)="changeToEnglish(); isEnglishLang = true" *ngIf="!isEnglishLang">Pl</a>
             <a class="nav-menu-item icon" *ngIf="!isDarkModeOn" (click)="onToggle(); isDarkModeOn = true">

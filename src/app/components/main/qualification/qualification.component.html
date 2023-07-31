@@ -1,15 +1,15 @@
 <div class="container col" [ngClass]="isWorkOpen ? 'large-height' : 'low-height'" id="qualification">
-    <h2 class="center-txt">Qualification</h2>
-    <h3 class="center-txt pb">My personal journey</h3>
+    <h2 class="center-txt">{{ 'qualification.title' | translate }}</h2>
+    <h3 class="center-txt pb">{{ 'qualification.subtitle' | translate }}</h3>
     <div class="qualification col" [ngStyle]="{'align-items' : 'center'}">
         <div class="qualification-title row" [ngStyle]="{'gap': '50px'}">
             <div class="qualification-title-education row" (click)="isWorkOpen = false" [ngClass]="!isWorkOpen ? 'active' : 'not-active'">
                 <mat-icon>book</mat-icon>
-                <h4 #educationTitle [ngStyle]="{'font-weight' : '500'}">Education</h4>
+                <h4 #educationTitle [ngStyle]="{'font-weight' : '500'}">{{ 'qualification.education' | translate }}</h4>
             </div>
             <div class="qualification-title-work row" (click)="isWorkOpen = true" [ngClass]="isWorkOpen ? 'active' : 'not-active'">
                 <mat-icon>work</mat-icon>
-                <h4 #workTitle [ngStyle]="{'font-weight' : '500'}">Work</h4>
+                <h4 #workTitle [ngStyle]="{'font-weight' : '500'}">{{ 'qualification.work' | translate }}</h4>
             </div>
         </div>
         <div class="qualification-road">
@@ -22,12 +22,12 @@
                 <ng-template matStepperIcon="number" let-index="index">
                     {{index+1}}
                 </ng-template>
-                <mat-step label="High school in Leżajsk">
-                    <h5>High school in Leżajsk</h5>
+                <mat-step label="{{'qualification.school' | translate}}">
+                    <h5>{{ 'qualification.school' | translate }}</h5>
                     <p>08/2011–06/2014</p>
                 </mat-step>
-                <mat-step label="University of Rzeszow">
-                    <h5>Environmental engineer</h5>
+                <mat-step label="{{'qualification.university' | translate}}">
+                    <h5>{{ 'qualification.profession' | translate }}</h5>
                     <p>10/2014–02/2018</p>
                 </mat-step>
               </mat-vertical-stepper>   
@@ -42,7 +42,7 @@
                       {{index+1}}
                   </ng-template>
   
-                  <mat-step label="Testin Interactive Agency">
+                  <mat-step label="{{'qualification.agency' | translate}}">
                     <h5>Webmaster</h5>
                     <p>08/2021–08/2022</p>
                   </mat-step>
@@ -52,7 +52,7 @@
                   </mat-step>
                   <mat-step label="Medvocation">
                     <h5>Angular developer</h5>
-                    <p>31.03.2023–Currently</p>
+                    <p>31.03.2023–{{'qualification.currently' | translate}}</p>
                   </mat-step>
                 </mat-vertical-stepper>   
             </div>

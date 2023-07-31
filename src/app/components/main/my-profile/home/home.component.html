@@ -11,12 +11,12 @@
         </div>
     </div>
     <div class="description col">
-        <h1>Hi, I'm <span class="main-color">Kuba</span></h1>
-        <h2>Frontend developer</h2>
+        <h1>{{ 'home.greeting' | translate }} <span class="main-color">Kuba</span></h1>
+        <h2>{{ 'home.profession' | translate }}</h2>
         <p>
-            {{ 'description' | translate }}
+            {{ 'home.description' | translate }}
         </p>
-        <button mat-raised-button color="primary"><a href="#contact" class="secondary-color">Contact me <i class="far fa-hand-point-right"></i></a></button>
+        <button mat-raised-button color="primary"><a href="#contact" class="secondary-color">{{ 'home.contact' | translate }} <i class="far fa-hand-point-right"></i></a></button>
     </div>
     <div class="my-picture col">
         <ng-container *ngFor="let image of images; let i = index">

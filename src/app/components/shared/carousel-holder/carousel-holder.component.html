@@ -10,16 +10,15 @@
     </div>
     <div class="right">
         <div class="portfolio-content-box col">
-            <h3>Modern Website</h3>
+            <h3>{{ 'portfolio.second-title' | translate }}</h3>
             <p>
-                Dynamic website designed to seamlessly adapt to any screen size, 
-                offering intuitive UI components and engaging animated interactions.
+                {{ 'portfolio.description' | translate }}
             </p>
             <button
             (mouseenter)="showLockIcon = true" (mouseleave)="showLockIcon = false"
-            matTooltip="To be continued"
+            matTooltip="{{'portfolio.tooltip' | translate}}"
             class="tooltip"
-            >Check <i class="fas fa-lock" *ngIf="showLockIcon" [@fadeInOut]></i>
+            >{{ 'portfolio.check' | translate }} <i class="fas fa-lock" *ngIf="showLockIcon" [@fadeInOut]></i>
             </button>
         </div>
     </div>

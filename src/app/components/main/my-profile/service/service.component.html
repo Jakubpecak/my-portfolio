@@ -1,21 +1,21 @@
 <div class="container col" id="services">
-    <h2 class="center-txt">Services</h2>
-    <h3 class="center-txt pb">What i offer</h3>
+    <h2 class="center-txt">{{ 'services.title' | translate }}</h2>
+    <h3 class="center-txt pb">{{ 'services.title' | translate }}</h3>
     <div class="service row">
         <div class="service-box col">
             <div class="service-box-icon"><i class="fas fa-code"></i></div>
-            <div class="service-box-title">Frontend<br>Developer</div>
-            <div class="service-box-view__more" (click)="openDialog('Frontend Developer')">View More<i class="fas fa-arrow-right"></i></div>
+            <div class="service-box-title" [innerHTML]="'services.frontend' | translate"></div>
+            <div class="service-box-view__more" (click)="openDialog('services.popup.title-1')">{{ 'services.view-more' | translate }}<i class="fas fa-arrow-right"></i></div>
         </div>
         <div class="service-box col">
             <div class="service-box-icon"><i class="fas fa-swatchbook"></i></div>
-            <div class="service-box-title">Ui/Ux<br>Designer</div>
-            <div class="service-box-view__more" (click)="openDialog('Ui/Ux Designer')">View More<i class="fas fa-arrow-right"></i></div>
+            <div class="service-box-title" [innerHTML]="'services.design' | translate"></div>
+            <div class="service-box-view__more" (click)="openDialog('services.popup.title-2')">{{ 'services.view-more' | translate }}<i class="fas fa-arrow-right"></i></div>
         </div>
         <div class="service-box col">
             <div class="service-box-icon"><i class="fas fa-pen"></i></div>
-            <div class="service-box-title">Branding<br>Designer</div>
-            <div class="service-box-view__more" (click)="openDialog('Branding Designer')">View More<i class="fas fa-arrow-right"></i></div>
+            <div class="service-box-title" [innerHTML]="'services.branding' | translate"></div>
+            <div class="service-box-view__more" (click)="openDialog('services.popup.title-3')">{{ 'services.view-more' | translate }}<i class="fas fa-arrow-right"></i></div>
         </div>
     </div>
 </div>

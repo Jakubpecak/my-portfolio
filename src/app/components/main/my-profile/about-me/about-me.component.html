@@ -1,15 +1,13 @@
 <div class="container col" id="about">
-    <h2 class="center-txt">About me</h2>
-    <h3 class="center-txt pb">My introduction</h3>
+    <h2 class="center-txt">{{ 'about.title' | translate }}</h2>
+    <h3 class="center-txt pb">{{ 'about.subtitle' | translate }}</h3>
     <div class="about row">
         <div class="about-picture">
             <img src="/assets/imgs/code.jpg" alt="my second picture">
         </div>
         <div class="about-content col center-txt">
             <p>
-                Flexible, motivated, and passionate about creating innovative solutions for clients. 
-                Key strengths include cooperation and problem-solving abilities. Always ready to take on new 
-                projects and eager to develop them further.
+                {{ 'about.description' | translate }}
             </p>
             <div class="about-content-details row">
                 <div class="about-content-details-item">
@@ -20,7 +18,7 @@
                     [isStyled]="true"
                     >
                     </app-animated-counter>
-                    <p class="center-txt">Years<br>experience</p>
+                    <p class="center-txt" [innerHTML]="'about.years' | translate"></p>
                 </div>
                 <div class="about-content-details-item">
                     <app-animated-counter
@@ -30,7 +28,7 @@
                     [isStyled]="true"
                     >
                     </app-animated-counter>
-                    <p class="center-txt">Completed<br>projects</p>
+                    <p class="center-txt" [innerHTML]="'about.projects' | translate"></p>
                 </div>
                 <div class="about-content-details-item">
                     <app-animated-counter
@@ -40,12 +38,12 @@
                     [isStyled]="true"
                     >
                     </app-animated-counter>
-                    <p class="center-txt">Companies<br>worked</p>
+                    <p class="center-txt" [innerHTML]="'about.companies' | translate"></p>
                 </div>
             </div>
             <div class="about-content-cv center-txt">
                 <a [href]="'assets/Jakub-Pęcak.pdf'" download="Jakub-Pęcak.pdf">
-                    <button mat-raised-button color="primary">Download CV <i class="fas fa-download"></i></button>
+                    <button mat-raised-button color="primary">{{ 'about.download' | translate }} <i class="fas fa-download"></i></button>
                 </a>
             </div>
         </div>
