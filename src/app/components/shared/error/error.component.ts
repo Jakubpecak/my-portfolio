@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ErrorComponent implements OnInit {
   @Input() control: any;
-  @Input() message: string = "Nie prawidłowa wartość";
+  @Input() message: string = "Invalid value";
 
   constructor() { }
 
