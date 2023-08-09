@@ -11,6 +11,9 @@
         height: auto;
         justify-content: center;
     }
+    @include mobile {
+        gap: 75px;
+    }
 }
 
 owl-carousel-o {
@@ -56,6 +59,15 @@ img {
     @include custom(1500px) {
         justify-content: flex-start;
         height: auto;
+    }
+    @include mobile {
+        gap: 10px;
+        align-items: center;
+    }
+    p {
+        @include mobile {
+            text-align: center;
+        }
     }
 }
 
