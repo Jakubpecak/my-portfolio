@@ -1,3 +1,5 @@
+@import '/src/styles/mixins.scss';
+
 :host {
     .container {
         padding-top: 100px;
@@ -8,6 +10,10 @@
 
     .contact-left {
         align-items: center;
+        width: 50%;
+        @include tablet {
+            width: 30%;
+        }
 
         &-email:hover, &-phone:hover, &-location:hover {
             color: #3f51b5!important;
@@ -19,9 +25,13 @@
             animation-iteration-count: infinite;
         }
     }
-    .contact-left, .contact-right {
+    .contact-right {
         width: 50%;
-
+        @include tablet {
+            width: 70%;
+        }
+    }
+    .contact-left, .contact-right {
         .icon {
             padding-right: 2rem;
         }

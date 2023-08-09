@@ -1,7 +1,12 @@
+@import '/src/styles/mixins.scss';
+
 :host {
     .row {
         justify-content: space-around;
         gap: 50px;
+        @include custom(1500px) {
+            justify-content: space-between;
+        }
         
         .social-sidebar {
             justify-content: center;
@@ -20,6 +25,9 @@
         border-radius: 50%;
         width: 100%;
         max-height: 350px;
+        @include custom(950px) {
+            max-height: 300px;
+        }
 
         &:hover {
             filter: brightness(1.1);
@@ -30,6 +38,9 @@
         max-width: 500px;
         justify-content: center;
         gap: 20px;
+        @include custom(950px) {
+            width: 50%;
+        }
 
         .main-color {
             font-size: 3.6rem;

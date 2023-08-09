@@ -1,11 +1,17 @@
+@import '/src/styles/mixins.scss';
+
 :host {
     .f-container {
         padding: 50px 100px;
         padding-bottom: 10px!important;
+        @include tablet {
+            padding: 50px;
+        }
     }
     .footer {
         display: flex;
         gap: 20px;
+        justify-content: space-between;
 
         &-logo {
             cursor: pointer;
@@ -24,6 +30,9 @@
         &-socials {
             gap: 20px;
             width: 240px;
+            @include tablet {
+                justify-content: center;
+            }
             &-item {
                 font-size: 18px;
             }

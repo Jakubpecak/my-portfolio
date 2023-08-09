@@ -5,13 +5,19 @@
 }
 
 @mixin tablet {
-    @media (max-width: 1024px) {
+    @media (max-width: 1150px) {
         @content;
     }
 }
 
 @mixin desktop {
     @media (max-width: 2560px) {
+        @content;
+    }
+}
+
+@mixin custom($width) {
+    @media (max-width: $width) {
         @content;
     }
 }

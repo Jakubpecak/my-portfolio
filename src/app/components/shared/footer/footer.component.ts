@@ -7,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   date: number = new Date().getFullYear();
+  isTablet: boolean = false;
+  isMobile: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.isTablet = window.innerWidth < 1000;
   }
 
 }

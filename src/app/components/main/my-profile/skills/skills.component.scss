@@ -1,0 +1,13 @@
+@import '/src/styles/mixins.scss';
+
+:host {
+    .skills {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+        @include custom(1000px) {
+            justify-content: space-between;
+            gap: 50px;
+        }
+    }
+}

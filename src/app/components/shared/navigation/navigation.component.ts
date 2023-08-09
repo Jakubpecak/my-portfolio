@@ -12,6 +12,8 @@ export class NavigationComponent implements OnInit {
   isDarkModeOn: boolean = false;
   isEnglishLang: boolean = true;
   darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
+  isTablet: boolean = false;
+  isMobile: boolean = false;
 
   @Output() changeLangtoEn = new EventEmitter<void>();
   @Output() changeLangtoPl = new EventEmitter<void>();
@@ -19,6 +21,7 @@ export class NavigationComponent implements OnInit {
   constructor(private darkModeService: DarkModeService) {}
 
   ngOnInit(): void {
+    this.isTablet = window.innerWidth < 1024;
   }
 
   changeToEnglish() {
