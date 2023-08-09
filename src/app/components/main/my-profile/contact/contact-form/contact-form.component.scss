@@ -1,6 +1,12 @@
+@import '/src/styles/mixins.scss';
+
 :host {
     .row {
         gap: 20px;
+        @include custom(550px) {
+            flex-wrap: wrap;
+            gap: 0;
+        }
     }
     .validBtn {
         background-color: #3f51b5;
@@ -12,6 +18,12 @@
 
     button {
         cursor: pointer;
+    }
+
+    app-input {
+        @include custom(550px) {
+            width: 100%;
+        }
     }
 }
 .error {

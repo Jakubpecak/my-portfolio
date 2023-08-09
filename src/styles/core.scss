@@ -1,5 +1,6 @@
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import '/src/styles/mixins.scss';
 
 html, body {
     box-sizing: border-box;
@@ -138,4 +139,10 @@ mat-step-header, .mat-step {
 
 .owl-dot.active span {
     background-color: #3f51b5!important;
+}
+
+mat-dialog-container {
+    @include mobile {
+        width: 100vw!important;
+    } 
 }

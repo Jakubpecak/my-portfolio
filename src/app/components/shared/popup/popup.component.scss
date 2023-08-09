@@ -1,7 +1,12 @@
+@import '/src/styles/mixins.scss';
+
 :host {
     .container-dialog {
         position: relative;
         width: 400px;
+        @include mobile {
+            width: auto!important;
+        }
 
         h1 {
             font-size: 25px!important;
@@ -31,6 +36,12 @@
         i {
             color: #3f51b5;
             padding-right: 5px;
+        }
+    }
+
+    iframe {
+        @include mobile {
+            width: 100%!important;
         }
     }
 }

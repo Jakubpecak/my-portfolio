@@ -22,6 +22,7 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {
     this.isTablet = window.innerWidth < 1024;
+    this.isMobile = window.innerWidth < 768;
   }
 
   changeToEnglish() {

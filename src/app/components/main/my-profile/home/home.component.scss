@@ -8,6 +8,7 @@
             justify-content: space-between;
         }
         @include mobile {
+            flex-wrap: wrap;
             gap: 20px;
         }
         
@@ -21,6 +22,9 @@
             
             &-item:hover a {
                 color: #3f51b5;
+            }
+            @include mobile {
+                order: -2;
             }
         }
     }
@@ -45,6 +49,7 @@
             width: 50%;
         }
         @include mobile {
+            flex-basis: 100%;
             gap: 10px;
         }
 
@@ -56,8 +61,13 @@
         transform: rotate(90deg);
         transition: all 0.5s;
     }
-    .my-picture:hover {
-        cursor: pointer;
+    .my-picture {
+        &:hover {
+            cursor: pointer;
+        }
+        @include mobile {
+            order: -1;
+        }
     }
 }
 

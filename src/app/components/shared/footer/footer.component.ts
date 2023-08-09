@@ -14,6 +14,7 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
     this.isTablet = window.innerWidth < 1000;
+    this.isMobile = window.innerWidth < 768;
   }
 
 }

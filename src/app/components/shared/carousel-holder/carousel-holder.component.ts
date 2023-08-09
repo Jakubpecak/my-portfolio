@@ -26,8 +26,8 @@ export class CarouselHolderComponent implements OnInit {
   ];
 
   customOptions: OwlOptions = {
-    loop: true,
-    autoplay: true,
+    loop: false,
+    autoplay: false,
     mouseDrag: true,
     touchDrag: false,
     pullDrag: false,

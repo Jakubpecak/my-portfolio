@@ -16,6 +16,9 @@
                 @include custom(950px) {
                     flex-basis: 70%;
                 }
+                @include custom(600px) {
+                    flex-basis: 100%;
+                }
                 img {
                     width: 80%;
                     margin: 0 auto;
@@ -29,6 +32,9 @@
                 flex-basis: 50%;
                 align-items: center;
                 justify-content: center;
+                @include custom(600px) {
+                    flex-basis: 100%;
+                }
                 p {
                     max-width: 600px;
                 }

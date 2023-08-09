@@ -16,6 +16,10 @@
         display: flex;
         gap: 20px;
         justify-content: space-between;
+        @include mobile {
+           flex-direction: column;
+           gap: 30px;
+        }
 
         &-logo {
             cursor: pointer;
@@ -23,6 +27,10 @@
 
         &-menu {
             gap: 20px;
+            @include mobile {
+                flex-direction: column;
+                gap: 10px;
+            }
             &-item {
                 font-size: 18px;
                 &:hover {
@@ -36,6 +44,9 @@
             width: 240px;
             @include tablet {
                 justify-content: center;
+            }
+            @include mobile {
+                justify-content: flex-start;
             }
             &-item {
                 font-size: 18px;
