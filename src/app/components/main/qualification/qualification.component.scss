@@ -1,4 +1,13 @@
+@import '/src/styles/mixins.scss';
+
 :host {
+
+  #qualification {
+    @include mobile {
+      padding-top: 9px;
+    }
+  }
+
   .large-height {
     height: 460px;
   }

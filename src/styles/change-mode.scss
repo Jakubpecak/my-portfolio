@@ -3,7 +3,7 @@ body.dark-mode {
     color: #dfe6e9;
 }
   
-body.light-mode {
+body.light-mode, body.light-mode .nav-menu-mobile, body.light-mode .mat-menu-panel {
     background-color: #dfe6e9;
     color: #2d3436;
 }
@@ -16,12 +16,17 @@ body.dark-mode h5, body.dark-mode h4, body.dark-mode p, body.dark-mode a {
     color: #dfe6e9;
 }
 
-body.dark-mode mat-step-header, body.dark-mode .mat-step, body.dark-mode .mat-step-text-label {
+body.dark-mode mat-step-header, body.dark-mode .mat-step, body.dark-mode .mat-step-text-label, body.dark-mode .nav-menu-mobile,
+body.dark-mode .mat-menu-panel  {
     background-color: #2d3436;
     color: #dfe6e9;
 }
 
-body.dark-mode mat-label, body.dark-mode .not-active {
+body.dark-mode .mat-menu-panel span, .mat-menu-panel i  {
+    color: #2d3436;
+}
+
+body.dark-mode mat-label, body.dark-mode .not-active, body.dark-mode .mat-menu-panel i, body.dark-mode .mat-menu-panel span {
     color: #dfe6e9!important; 
 }
 

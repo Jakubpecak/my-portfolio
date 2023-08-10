@@ -1,6 +1,7 @@
 @import '/src/styles/mixins.scss';
 
 :host {
+    
     .row {
         gap: 20px;
         @include custom(550px) {

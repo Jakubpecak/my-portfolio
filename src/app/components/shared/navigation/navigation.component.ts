@@ -1,6 +1,7 @@
 import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { DarkModeService } from 'angular-dark-mode';
 import { Observable } from 'rxjs';
+import {ThemePalette} from '@angular/material/core';
 
 @Component({
   selector: 'app-navigation',
@@ -14,6 +15,8 @@ export class NavigationComponent implements OnInit {
   darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
   isTablet: boolean = false;
   isMobile: boolean = false;
+  color: ThemePalette = 'primary';
+  checked = false;
 
   @Output() changeLangtoEn = new EventEmitter<void>();
   @Output() changeLangtoPl = new EventEmitter<void>();
@@ -35,5 +38,6 @@ export class NavigationComponent implements OnInit {
 
   onToggle(): void {
     this.darkModeService.toggle();
+    this.isDarkModeOn = !this.isDarkModeOn;
   }
 }

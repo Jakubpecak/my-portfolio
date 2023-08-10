@@ -1,6 +1,12 @@
 @import '/src/styles/mixins.scss';
 
 :host {
+    #services {
+        @include mobile {
+            padding-top: 0;
+        }
+    }
+
     .service {
         justify-content: center;
         gap: 50px;

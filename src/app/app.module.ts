@@ -45,6 +45,8 @@ import { LightboxModule } from 'ngx-lightbox';
 import { FileSaverModule } from 'ngx-filesaver';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatMenuModule } from '@angular/material/menu';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -72,7 +74,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PortfolioComponent,
     CarouselHolderComponent,
     SnackbarComponent,
-    AnimatedCounterComponent,
+    AnimatedCounterComponent
   ],
   imports: [
     BrowserModule,
@@ -99,6 +101,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatSnackBarModule,
     LightboxModule,
     FileSaverModule,
+    MatSlideToggleModule,
+    MatMenuModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

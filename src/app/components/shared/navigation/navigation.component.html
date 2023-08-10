@@ -1,8 +1,8 @@
 <nav class="nav-container">
     <div class="nav">
-        <div class="nav-logo center main-color" routerLink="/">{{ 'navigation.logo-name' | translate }}</div>
+        <div class="nav-logo center main-color" routerLink="/" *ngIf="!isMobile">{{ 'navigation.logo-name' | translate }}</div>
         <div class="nav-menu center" *ngIf="!isMobile">
-            <a class="nav-menu-item main-color" router>{{'navigation.menu.home' | translate}}</a>
+            <a class="nav-menu-item main-color">{{'navigation.menu.home' | translate}}</a>
             <a href="#about" class="nav-menu-item">{{'navigation.menu.about' | translate}}</a>
             <a href="#skills" class="nav-menu-item">{{'navigation.menu.skills' | translate}}</a>
             <a href="#qualification" class="nav-menu-item" *ngIf="!isTablet">{{'navigation.menu.qualification' | translate}}</a>
@@ -18,9 +18,31 @@
                 <i class="fas fa-moon"></i>
             </a>
         </div>
-
-        <div class="nav-menu center" *ngIf="isMobile">
-
+        <div class="nav-menu-mobile center" *ngIf="isMobile">
+            <div class="nav-menu-mobile-item center main-color" routerLink="/">{{ 'navigation.logo-name' | translate }}</div>
+            <a class="nav-menu-mobile-item" (click)="changeToPolish(); isEnglishLang = false" *ngIf="isEnglishLang">En</a>
+            <a class="nav-menu-mobile-item" (click)="changeToEnglish(); isEnglishLang = true" *ngIf="!isEnglishLang">Pl</a>
+            <div class="nav-menu-mobile-item" [ngStyle]="{'display' : 'flex'}">
+                <mat-slide-toggle
+                (change)="onToggle()"
+                [color]="color">
+                <i class="fas fa-sun" *ngIf="isDarkModeOn" [ngStyle]="{'padding-left' : '6px'}"></i>
+                <i class="fas fa-moon" *ngIf="!isDarkModeOn" [ngStyle]="{'padding-left' : '6px'}"></i>
+                </mat-slide-toggle>
+            </div>
+            <div class="nav-menu-mobile-item">
+                <button mat-button [matMenuTriggerFor]="aboveMenu">Menu</button>
+                <mat-menu #aboveMenu="matMenu" yPosition="above">
+                    <div [ngStyle]="{'display': 'flex', 'flex-wrap' : 'wrap', 'justify-content' : 'center', 'gap' : '20px'}">
+                        <a routerLink="/" mat-menu-item><i class="fas fa-home"></i><span>{{'navigation.menu.home' | translate}}</span></a>
+                        <a href="#about" mat-menu-item><i class="fas fa-user"></i><span>{{'navigation.menu.about' | translate}}</span></a>
+                        <a href="#skills" mat-menu-item><i class="fas fa-file-alt"></i><span>{{'navigation.menu.skills' | translate}}</span></a>
+                        <a href="#qualification" mat-menu-item><i class="fas fa-id-card"></i><span>{{'navigation.menu.qualification' | translate}}</span></a>
+                        <a href="#portfolio" mat-menu-item><i class="fas fa-image"></i><span>{{'navigation.menu.portfolio' | translate}}</span></a>
+                        <a href="#contact" mat-menu-item><i class="fas fa-mobile-alt"></i><span>{{'navigation.menu.contact' | translate}}</span></a>
+                    </div>
+                </mat-menu>
+            </div>
         </div>
     </div>
 </nav>

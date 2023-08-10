@@ -29,6 +29,28 @@
             &-item:hover {
                 color: #3f51b5;
             }
+
+            &-mobile {
+                display: flex;
+                justify-content: space-between;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                z-index: 200;
+                padding: 25px 20px;
+                width: -webkit-fill-available;
+                box-shadow: 0px 0px 24px 0px rgb(63, 81, 181);
+                &-item {
+                    font-size: 20px;
+                    margin-bottom: 0!important;
+                    &:first-child {
+                        font-size: 25px;
+                    }
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
         }
     }
 }
