@@ -72,6 +72,11 @@
         @include mobile {
             order: -1;
         }
+        img {
+            @include mobile {
+                width: 250px;
+            }
+        }
     }
 }
 
