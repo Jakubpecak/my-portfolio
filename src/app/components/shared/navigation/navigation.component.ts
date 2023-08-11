@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { DarkModeService } from 'angular-dark-mode';
 import { Observable } from 'rxjs';
 import {ThemePalette} from '@angular/material/core';
@@ -21,7 +21,9 @@ export class NavigationComponent implements OnInit {
   @Output() changeLangtoEn = new EventEmitter<void>();
   @Output() changeLangtoPl = new EventEmitter<void>();
 
-  constructor(private darkModeService: DarkModeService) {}
+  constructor(private darkModeService: DarkModeService) {
+    this.darkModeService.disable();
+  }
 
   ngOnInit(): void {
     this.isTablet = window.innerWidth < 1024;

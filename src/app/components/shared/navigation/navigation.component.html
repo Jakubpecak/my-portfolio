@@ -26,8 +26,8 @@
                 <mat-slide-toggle
                 (change)="onToggle()"
                 [color]="color">
-                <i class="fas fa-sun" *ngIf="isDarkModeOn" [ngStyle]="{'padding-left' : '6px'}"></i>
-                <i class="fas fa-moon" *ngIf="!isDarkModeOn" [ngStyle]="{'padding-left' : '6px'}"></i>
+                <i class="fas fa-sun" *ngIf="!isDarkModeOn" [ngStyle]="{'padding-left' : '6px'}"></i>
+                <i class="fas fa-moon" *ngIf="isDarkModeOn" [ngStyle]="{'padding-left' : '6px'}"></i>
                 </mat-slide-toggle>
             </div>
             <div class="nav-menu-mobile-item">
