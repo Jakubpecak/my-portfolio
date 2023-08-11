@@ -11,23 +11,24 @@ export class SkillsAccordionComponent implements OnInit {
   @Input() progressList: number[] = [];
   expandedIndex = 0;
   animateCalled: boolean = false;
+  timeout: any;
+  isMobile: boolean = false;
 
   constructor(private elementRef: ElementRef) { }
 
   ngOnInit(): void {
+    this.isMobile = window.innerWidth < 768;
   }
 
   @HostListener('window:scroll')
   onWindowScroll() {
-    if (!this.animateCalled) {
-      const skillElement = this.elementRef.nativeElement.querySelector('#skill');
-      const windowBottom = window.innerHeight + window.scrollY;
-  
-      if (skillElement && windowBottom >= skillElement.offsetTop) {
-        this.animateProgressBars();
+      const skillElement = this.elementRef.nativeElement.querySelector('.accordion-item-body');
+      const scrollThreshold = this.isMobile ? 1000 : 700;
+
+      if (!this.animateCalled && skillElement && window.scrollY > scrollThreshold) {
         this.animateCalled = true;
+        this.animateProgressBars();
       }
-    }
   }
 
   animateProgressBar(targetElement: HTMLElement, targetValue: number) {
@@ -37,7 +38,7 @@ export class SkillsAccordionComponent implements OnInit {
       progress++;
       targetElement.style.width = `${progress}%`;
 
-      if (progress >= targetValue) {
+      if (progress === targetValue) {
         clearInterval(intervalId);
       }
     }, 20);
@@ -48,7 +49,7 @@ export class SkillsAccordionComponent implements OnInit {
 
     for (let i = 0; i < progressBarElements.length; i++) {
       const targetElement = progressBarElements[i] as HTMLElement;
-      const targetValue = this.progressList[0];
+      const targetValue = 100;
       this.animateProgressBar(targetElement, targetValue);
     }
   }

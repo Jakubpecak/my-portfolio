@@ -35,7 +35,7 @@
     },
     "qualification": {
         "title": "Kwalifikacje", 
-        "subtitle": "Moja droga życiowa",
+        "subtitle": "Moja droga zawodowa",
         "education": "Edukacja",
         "work": "Praca",
         "school": "Liceum w Leżajsku",
@@ -76,7 +76,7 @@
         "call": "Zadzwoń",
         "email": "Email",
         "location": "Polska",
-        "accept": "Zaakceptuj",
+        "accept": "Akceptuję regulamin serwisu.",
         "send": "Wyślij"
     },
     "footer": {

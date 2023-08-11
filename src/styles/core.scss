@@ -106,6 +106,14 @@ button {
     margin: -40px 0;
 }
 
+.owl-nav {
+    @include mobile {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
 .owl-prev, .owl-next {
     color: #fff!important;
     background-color: #3f51b5!important;
@@ -142,6 +150,7 @@ mat-step-header, .mat-step {
 }
 
 mat-dialog-container {
+    background-color: #dfe6e9!important;
     @include mobile {
         width: 100vw!important;
     } 
@@ -175,9 +184,13 @@ mat-dialog-container {
     bottom: 0;
     left: 0;
     min-width: 100%!important;
-    height: 30vh;
+    height: 50vh;
     border-radius: 25px 25px 0 0!important;
     display: flex;
     align-items: center;
     box-shadow: 0px 0px 24px 0px rgb(63, 81, 181);
+}
+
+.mat-checkbox-layout {
+    white-space: break-spaces!important;
 }

@@ -27,6 +27,9 @@
       position: absolute;
       left: 0;
       top: 0;
+      @include mobile {
+        left: -36px;
+      }
     }
   }
 

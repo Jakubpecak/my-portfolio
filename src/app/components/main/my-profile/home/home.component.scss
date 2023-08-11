@@ -36,6 +36,9 @@
         @include custom(950px) {
             max-height: 300px;
         }
+        @include mobile {
+            max-height: 250px;
+        }
 
         &:hover {
             filter: brightness(1.1);
