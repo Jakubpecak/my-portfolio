@@ -194,3 +194,14 @@ mat-dialog-container {
 .mat-checkbox-layout {
     white-space: break-spaces!important;
 }
+
+.mat-snack-bar-handset .mat-snack-bar-container {
+    @include mobile {
+        margin: 20px 8px!important;
+    }
+    .mat-simple-snackbar {
+        @include mobile {
+            justify-content: center;
+        }
+    }
+}

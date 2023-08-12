@@ -49,3 +49,7 @@ body.dark-mode .mat-step-icon-selected, body.dark-mode .mat-step-icon-state-edit
 body.dark-mode .copy-rights {
     color: #3f51b5;
 }
+
+body.dark-mode .cdk-overlay-dark-backdrop {
+    background: rgba(45,52,54,.32);
+}

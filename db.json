@@ -6,6 +6,13 @@
       "phone": "543545",
       "description": "testtttttttttttttt",
       "id": 1
+    },
+    {
+      "name": "test",
+      "email": "test2@o2.pl",
+      "phone": "234234523",
+      "description": "sdfsdfsdfsdfsfs",
+      "id": 2
     }
   ],
   "test2": [
