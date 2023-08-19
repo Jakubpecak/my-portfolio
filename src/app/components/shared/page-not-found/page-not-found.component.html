@@ -1,1 +1,6 @@
-<p>page-not-found works!</p>
+<div>
+    <div class="error">404</div>
+    <br /><br />
+    <span class="info">{{ 'page.not-found' | translate }}</span>
+</div>
+<button mat-raised-button color="primary" [routerLink]="'/'">{{ 'navigation.menu.home' | translate }} <i class="fas fa-home"></i></button>

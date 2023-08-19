@@ -1,4 +1,4 @@
-<nav class="nav-container">
+<nav class="nav-container" *ngIf="!isPageNotFound">
     <div class="nav">
         <div class="nav-logo center main-color" routerLink="/" *ngIf="!isMobile">{{ 'navigation.logo-name' | translate }}</div>
         <div class="nav-menu center" *ngIf="!isMobile">

@@ -111,5 +111,8 @@
         "max-description": "Max. 500 characters.",
         "message-failed": "Error occurred, please try again later.",
         "message-success": "Message was sent."
+    },
+    "page": {
+        "not-found": "Page not found"
     }
 }

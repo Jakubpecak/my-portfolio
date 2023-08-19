@@ -111,5 +111,8 @@
         "max-description": "Maks. 500 znaków.",
         "message-failed": "Wystąpił błąd, spróbuj ponownie później.",
         "message-success": "Wiadomość została wysłana."
+    },
+    "page": {
+        "not-found": "Strona nie istnieje"
     }
 }

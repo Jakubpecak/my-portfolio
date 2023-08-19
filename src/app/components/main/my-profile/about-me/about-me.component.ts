@@ -1,3 +1,4 @@
+import { MyProfileService } from 'src/app/services/my-profile.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent implements OnInit {
+  isEngLang: boolean = true;
 
-  constructor() { }
+  constructor(private myProfileService: MyProfileService) { }
 
   ngOnInit(): void {
+    this.myProfileService.isEngLang.subscribe((lang) => {
+      this.isEngLang = lang;
+    });
   }
 
 }

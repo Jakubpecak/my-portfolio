@@ -42,7 +42,10 @@
                 </div>
             </div>
             <div class="about-content-cv center-txt">
-                <a [href]="'assets/Jakub-Pęcak.pdf'" download="Jakub-Pęcak.pdf">
+                <a [href]="'assets/Jakub-Pęcak-eng.pdf'" download="Jakub-Pęcak-eng.pdf" *ngIf="isEngLang">
+                    <button mat-raised-button color="primary">{{ 'about.download' | translate }} <i class="fas fa-download"></i></button>
+                </a>
+                <a [href]="'assets/Jakub-Pęcak-pl.pdf'" download="Jakub-Pęcak-pl.pdf" *ngIf="!isEngLang">
                     <button mat-raised-button color="primary">{{ 'about.download' | translate }} <i class="fas fa-download"></i></button>
                 </a>
             </div>

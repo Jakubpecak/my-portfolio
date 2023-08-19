@@ -9,11 +9,8 @@ const routes: Routes = [
     pathMatch: 'full',
     component: MyProfileComponent
   },
-  {
-    path: '**',
-    pathMatch: 'full',
-    component: PageNotFoundComponent
-  }
+  { path: '404', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/404' }
 ];
 
 @NgModule({
