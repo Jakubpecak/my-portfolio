@@ -11,10 +11,6 @@ export class AboutMeComponent implements OnInit {
 
   constructor(private myProfileService: MyProfileService) { }
 
-  ngOnInit(): void {
-    this.myProfileService.isEngLang.subscribe((lang) => {
-      this.isEngLang = lang;
-    });
-  }
+  ngOnInit(): void {}
 
 }

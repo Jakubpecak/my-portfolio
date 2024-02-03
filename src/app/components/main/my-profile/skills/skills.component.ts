@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
   leftWrapTitle: string[] = ['skills.title-2', 'skills.experience'];
-  leftWrapText: string[] = ['HTML5', 'Css/Sass', 'Javascript/Typescript', 'Angular', 'Git'];
-  leftProgressList: number[] = [80, 80, 60, 60, 40];
+  leftWrapText: string[] = ['HTML5', 'Css/Sass', 'Javascript/Typescript', 'Angular 14+', 'Git', 'Responsive Web Design'];
+  leftProgressList: number[] = [80, 80, 70, 70, 60, 80];
 
   rightWrapTitle: string[] = ['skills.title-3', 'skills.experience'];
-  rightWrapText: string[] = ['Bootcamp Junior Java Developer', 'Wordpress', 'Responsive Web Design', 'Figma', 'Adobe XD'];
-  rightProgressList: number[] = [40, 80, 80, 40, 40];
+  rightWrapText: string[] = ['Bootcamp Junior Java Developer', 'Wordpress', 'Figma/Adobe XD', 'Github/Gitlab', 'Jira (Scrum)', 'TDD (Test-driven development)'];
+  rightProgressList: number[] = [20, 70, 35, 35, 50, 15];
 
   constructor() {}
 

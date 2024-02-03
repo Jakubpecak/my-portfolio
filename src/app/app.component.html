@@ -1,6 +1,6 @@
 <app-navigation 
-(changeLangtoEn)="useEnglish()"
-(changeLangtoPl)="usePolish()">
+(languageChanged)="useLanguage($event)" 
+[isEnglishLang]="isEnglishLang">
 </app-navigation>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

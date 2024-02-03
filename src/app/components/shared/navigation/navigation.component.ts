@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, OnDestroy } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, OnDestroy, Input } from '@angular/core';
 import { DarkModeService } from 'angular-dark-mode';
 import { Observable } from 'rxjs';
 import {ThemePalette} from '@angular/material/core';
@@ -12,20 +12,16 @@ import { MyProfileService } from 'src/app/services/my-profile.service';
 export class NavigationComponent implements OnInit {
   isSticky: boolean = false;
   isDarkModeOn: boolean = false;
-  isEnglishLang: boolean = true;
   darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
   isTablet: boolean = false;
   isMobile: boolean = false;
   color: ThemePalette = 'primary';
   checked = false;
   isPageNotFound: boolean = false;
+  @Input() isEnglishLang!: boolean;
+  @Output() languageChanged = new EventEmitter<string>();
 
-  @Output() changeLangtoEn = new EventEmitter<void>();
-  @Output() changeLangtoPl = new EventEmitter<void>();
-
-  constructor(private darkModeService: DarkModeService, private myProfileService: MyProfileService) {
-    this.darkModeService.disable();
-  }
+  constructor(private darkModeService: DarkModeService, private myProfileService: MyProfileService) {}
 
   ngOnInit(): void {
     this.isTablet = window.innerWidth < 1024;
@@ -34,20 +30,15 @@ export class NavigationComponent implements OnInit {
     this.myProfileService.pageNotFound.subscribe((value) => {
       this.isPageNotFound = value;
     });
+
+    this.isDarkModeOn = JSON.parse(localStorage.getItem('dark-mode') as any).darkMode;
   }
 
-  changeToEnglish() {
-    this.changeLangtoEn.emit();
-    this.myProfileService.isEngLang.next(true);
-  }
-
-  changeToPolish() {
-    this.changeLangtoPl.emit();
-    this.myProfileService.isEngLang.next(false);
+  changeLanguage(language: string) {
+    this.languageChanged.emit(language);
   }
 
   onToggle(): void {
     this.darkModeService.toggle();
-    this.isDarkModeOn = !this.isDarkModeOn;
   }
 }

@@ -9,8 +9,8 @@
             <a href="#services" class="nav-menu-item" *ngIf="!isTablet">{{'navigation.menu.services' | translate}}</a>
             <a href="#portfolio" class="nav-menu-item" *ngIf="!isTablet">{{'navigation.menu.portfolio' | translate}}</a>
             <a href="#contact" class="nav-menu-item">{{'navigation.menu.contact' | translate}}</a>
-            <a class="nav-menu-item" (click)="changeToPolish(); isEnglishLang = false" *ngIf="isEnglishLang">En</a>
-            <a class="nav-menu-item" (click)="changeToEnglish(); isEnglishLang = true" *ngIf="!isEnglishLang">Pl</a>
+            <a class="nav-menu-item" (click)="changeLanguage('pl'); isEnglishLang = false" *ngIf="isEnglishLang">En</a>
+            <a class="nav-menu-item" (click)="changeLanguage('en'); isEnglishLang = true" *ngIf="!isEnglishLang">Pl</a>
             <a class="nav-menu-item icon" *ngIf="!isDarkModeOn" (click)="onToggle(); isDarkModeOn = true">
                 <i class="fas fa-sun"></i>
             </a>
@@ -20,14 +20,15 @@
         </div>
         <div class="nav-menu-mobile center" *ngIf="isMobile">
             <div class="nav-menu-mobile-item center main-color" routerLink="/">{{ 'navigation.logo-name' | translate }}</div>
-            <a class="nav-menu-mobile-item" (click)="changeToPolish(); isEnglishLang = false" *ngIf="isEnglishLang">En</a>
-            <a class="nav-menu-mobile-item" (click)="changeToEnglish(); isEnglishLang = true" *ngIf="!isEnglishLang">Pl</a>
+            <a class="nav-menu-mobile-item" (click)="changeLanguage('pl'); isEnglishLang = false" *ngIf="isEnglishLang">En</a>
+            <a class="nav-menu-mobile-item" (click)="changeLanguage('en'); isEnglishLang = true" *ngIf="!isEnglishLang">Pl</a>
             <div class="nav-menu-mobile-item" [ngStyle]="{'display' : 'flex'}">
                 <mat-slide-toggle
-                (change)="onToggle()"
-                [color]="color">
-                <i class="fas fa-sun" *ngIf="!isDarkModeOn" [ngStyle]="{'padding-left' : '6px'}"></i>
-                <i class="fas fa-moon" *ngIf="isDarkModeOn" [ngStyle]="{'padding-left' : '6px'}"></i>
+                    (change)="onToggle()"
+                    [(ngModel)]="isDarkModeOn"
+                    [color]="color">
+                    <i class="fas fa-sun" *ngIf="!isDarkModeOn" [ngStyle]="{'padding-left' : '6px'}"></i>
+                    <i class="fas fa-moon" *ngIf="isDarkModeOn" [ngStyle]="{'padding-left' : '6px'}"></i>
                 </mat-slide-toggle>
             </div>
             <div class="nav-menu-mobile-item">

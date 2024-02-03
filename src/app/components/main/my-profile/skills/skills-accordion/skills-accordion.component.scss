@@ -59,4 +59,17 @@
   .open {
     color: #3f51b5;
   }
+
+  .accordionAnimation {
+    animation: accordionAnimate 1s;  
+  }
+  
+  @keyframes accordionAnimate {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }

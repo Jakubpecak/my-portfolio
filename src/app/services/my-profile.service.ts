@@ -8,9 +8,8 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class MyProfileService {
   pageNotFound = new BehaviorSubject<boolean>(false);
-  isEngLang = new BehaviorSubject<boolean>(true);
 
-  private url = 'http://localhost:3000/message';
+  private url = 'https://json-server-qijc.onrender.com/message';
 
   constructor(private http: HttpClient) {}
 
